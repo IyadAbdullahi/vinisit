@@ -1,0 +1,231 @@
+---
+alwaysApply: true
+---
+
+## Application Overview
+ProMano is an integrated project and human resource management application designed for construction and engineering firms. It streamlines project execution from procurement to payment while managing the company's workforce, from recruitment to payroll.
+
+***
+
+## User Roles & Access Control
+
+### Super Admin 🦸
+- **Primary Role**: System oversight and configuration
+- **Access Level**: Unrestricted access to all data and settings
+- **Key Responsibilities**:
+    - User account and employee management (create, modify, deactivate).
+    - System-wide configuration (departments, roles, parameters).
+    - Data integrity and system audits.
+
+### Managing Director 👔
+- **Primary Role**: High-level strategic oversight and performance monitoring.
+- **Access Level**: Read-only access to all aggregated data across departments, projects, and financials. Ability to approve or deny requests and payments.
+- **Key Responsibilities**:
+    - Hands-off overview of all system activities.
+    - In-depth performance monitoring across departments, projects, payments, and requests.
+    - Monitoring project progress, milestones, and tasks.
+    - Tracking payment expenses and budgetary limits for all and each project.
+    - Review aggregated data (e.g., expenses, upcoming expenses, budget vs. actuals) with cross-distribution capabilities.
+    - Client and lead general information, including related revenue and projects.
+    - History section to aggregate project, budget, and expenses from previous years.
+    - **Project approval and resource allocation** – all new projects require their approval.
+    - **Approve or deny critical requests and payments** (e.g., `LeaveRequest`, `RequestForm`, `Payment`).
+
+### Department Head 👨‍💼
+- **Primary Role**: Departmental management and oversight
+- **Access Level**: Full access to department data, limited system settings
+- **Key Responsibilities**:
+    - Department unit and budget management.
+    - **Create projects and milestones (subject to Managing Director approval).**
+    - Project lifecycle management (milestones, tasks, timelines).
+    - Team assignment and progress monitoring.
+    - **First-level approval for requests originating from their department** (`RequestForm`, `LeaveRequest`).
+    - High-level approvals (leave requests, performance reviews).
+    - Department performance monitoring.
+
+### HR Manager 🧑‍💼
+- **Primary Role**: Human resource management
+- **Access Level**: Full access to employee data, limited project visibility
+- **Key Responsibilities**:
+    - Employee lifecycle management (onboarding, records, terminations).
+    - Payroll and compensation administration.
+    - Leave and performance management.
+    - HR compliance and policy enforcement.
+
+### Accountant 💰
+- **Primary Role**: Financial record-keeping and processing.
+- **Access Level**: Full access to financial records, payroll, and payment processing. Limited visibility into project details relevant for financial reconciliation.
+- **Key Responsibilities**:
+    - Manage and process payrolls (`Payslip`).
+    - Oversee project and general financial transactions (`RequestForm`, `Payment`).
+    - **Manage the Revenue section, including recording income from clients and projects.**
+    - Generate financial reports and statements.
+    - Reconcile accounts and manage vendor payments (`Vendor`).
+    - **Generate `Payment` records from approved `RequestForm`s.**
+
+### Administrator 🧑‍💻
+- **Primary Role**: General administrative support and data management.
+- **Access Level**: Access to manage shared resources, basic user support, and data entry across various modules as assigned by Super Admin or Department Head.
+- **Key Responsibilities**:
+    - Assist with user account basic management.
+    - **Add and manage company-wide `RequestForm` templates and instances.**
+    - **Record and manage `Revenue` (income) from various sources, including `Clients` and `Projects`.**
+    - Request approval and management.
+    - Support document management and archiving.
+    - General data entry and system maintenance tasks.
+    - **Second-level approval for `RequestForm`s after Department Head.**
+
+### Employee 🧑‍💻
+- **Primary Role**: Task execution and self-service
+- **Access Level**: Personal data and assigned tasks only
+- **Key Responsibilities**:
+    - Task management and status updates (`Task`).
+    - Personal information maintenance (`Employee` profile).
+    - `LeaveRequest` submission and payslip access (`Payslip`).
+    - Team collaboration on assigned projects.
+    - **Initiate `RequestForm`s.**
+
+***
+
+## Page Structure & Navigation
+
+### Super Admin Pages
+- **Dashboard**: System-wide metrics (projects, employees, requests, financials).
+- **Departments**: Department and unit configuration (`Department`, `DepartmentUnit`).
+- **System Settings**: Application-wide configurations and integrations.
+- **All Projects**: Comprehensive project listing with filtering (`Project`).
+- **All Employees**: Complete employee directory with CRUD operations and full profiles (`User`, `Employee`).
+
+### Managing Director Pages
+- **Executive Dashboard**: High-level aggregated metrics across all departments, projects, and financials (e.g., total budget vs. spent, overall project progress, aggregated payment statuses).
+- **Performance Overview**: Drill-down reports on departmental and project performance.
+- **Financial Insights**: Consolidated view of all `RequestForm` and `Payment` data, expense trends, and upcoming financial obligations.
+- **Approvals & Decisions**: Centralized interface for approving/denying `LeaveRequest`, `RequestForm`, and `Payment`, **including project approvals.**
+- **Client & Leads Management**: Overview of all `Client` records and potential leads, including associated `Revenue`.
+- **History**: Consolidated view of all activities related to project budgets and expenses, categorized by year and month, with filters to navigate across different time periods.
+
+### Department Head Pages
+- **Department Dashboard**: Department metrics and pending approvals.
+- **My Department's Projects**: Department-specific project listing (`Project`).
+- **Project Details**: Comprehensive project view including:
+    - Milestones & Tasks (Gantt/Kanban views) (`Milestone`, `Task`).
+    - Budget & Finance breakdown (`Project`, `RequestForm`, `Payment`, `QuantitySurvey`).
+    - Document repository.
+    - Team member management (`Employee` assignments).
+- **Team**: Department employee directory with assignments (`Employee`).
+- **Task Management**: Personal task board across all projects (`Task`).
+- **Approvals**: Centralized approval workflow for `LeaveRequest`, `RequestForm`, `Payment`, `Project` approvals (initiating for MD review), and **`RequestForm`s from their department**.
+- **Procurement**: Project procurement tracking and management (`RequestForm`, `Item`, `Vendor`).
+- **Reports**: Department-specific performance reports.
+
+### HR Manager Pages
+- **HR Dashboard**: Key HR metrics (turnover, leave requests, reviews).
+- **Employee Directory**: Complete employee management interface (`Employee`, `User`).
+- **Payroll**: Payroll processing and payment history (`Payslip`).
+- **Leave Management**: Centralized leave request handling (`LeaveRequest`).
+- **Performance Reviews**: Review scheduling and record management.
+- **Recruitment**: Job posting and applicant management (future module).
+
+### Accountant Pages
+- **Accounting Dashboard**: Overview of financial transactions, pending payments, and revenue.
+- **Payroll Management**: Detailed interface for processing, reviewing, and approving `Payslip` runs.
+- **Payment Processing**: Management and processing of `Payment`s to `Vendor`s, often initiated from approved `RequestForm`s.
+- **Revenue Management**: Detailed interface for recording and managing `Revenue` from projects and clients (`Revenue`, `Client`).
+- **Financial Reports**: Generation of balance sheets, income statements, and custom financial reports.
+- **Payment Reconciliation**: Tracking and reconciliation of all `Payment` records against `RequestForm`s or other financial triggers.
+- **Generate Payments from Requests**: Functionality to create a `Payment` record directly from an approved `RequestForm`.
+
+### Administrator Pages
+- **Admin Dashboard**: Overview of system health, active users, and recent activities.
+- **Request Forms Management**: Creation, editing, and archiving of company `RequestForm` templates. **Ability to view, add, and manage all `RequestForm` instances, including their status.**
+- **Revenue Management**: Interface to record `Revenue` data, linking to `Projects` and `Clients`.
+- **Client & Leads Management**: Management of `Client` records and potential leads (`Client`).
+- **Shared Resources**: Management of company-wide shared resources (e.g., vehicles, equipment).
+- **Basic User Support**: Assisting users with basic queries and password resets.
+- **Approvals**: Centralized approval workflow for `RequestForm`s, serving as the **second-level approver**.
+
+### Employee Pages
+- **My Dashboard**: Personalized task overview and notifications.
+- **My Tasks**: Personal task management (to-do/Kanban) (`Task`).
+- **My Profile**: Personal and employment detail access (`User`, `Employee`).
+- **Leave**: `LeaveRequest` form and history.
+- **My Payslips**: `Payslip` viewing and download.
+- **Request Forms**: Interface to initiate and view the status of their submitted `RequestForm`s.
+
+***
+
+## Development Guidelines
+
+### Authentication & Authorization
+- Implement **role-based access control (RBAC)** based on `UserRole` type.
+- Use JWT tokens for session management.
+- Enforce page-level and feature-level permissions based on `UserRole`.
+- Implement secure password policies and MFA where needed.
+
+### Data Models
+- **Users & Employees**: `User` and `Employee` are inherently linked. The `User` interface provides login and role information, while `Employee` contains detailed HR and project assignment data. They are effectively the same person from different system perspectives.
+- **Projects**: Hierarchical project structure with milestones and tasks (`Project`, `Milestone`, `Task`). All project creation will require `Managing Director` approval.
+- **Departments**: Organizational structure with units and budgets (`Department`, `DepartmentUnit`).
+- **Procurement**: Project-related purchasing and vendor management, primarily managed through `RequestForm` and `Item`, and linked to `Vendor`.
+- **Payroll**: Employee compensation and payment history (`Payslip`).
+- **Leave Management**: Tracking and approval of employee leave (`LeaveRequest`).
+- **Quantity Survey**: Detailed breakdowns of project quantities and costs (`QuantitySurvey`).
+- **Request Forms**: Templates and instances for various internal requests (`RequestForm`).
+- **Payments**: Records of financial disbursements tied to requests (`Payment`).
+- **Clients**: Information about clients (`Client`).
+- **Revenue**: Records of income, linked to projects or clients (`Revenue`).
+
+### UI/UX Principles
+- **Responsive Design**: Mobile-first approach for field accessibility.
+- **Role-Based Navigation**: Dynamic menu based on user permissions.
+- **Dashboard-Centric**: Each role starts with relevant metrics.
+- **Progressive Disclosure**: Drill-down from overview to details.
+- **Approval Workflows**: Clear visual indicators for pending actions, reflecting the multi-level approval process for `RequestForm`s and **project approvals**.
+
+### Key Features to Implement
+1.  **Project Management**: Gantt charts, Kanban boards, milestone tracking (`Project`, `Milestone`, `Task`), **including the Managing Director's project approval workflow.**
+2.  **Financial Tracking**: Budget monitoring, `RequestForm` management for procurement, `Payment` processing, `QuantitySurvey` integration, and **comprehensive `Revenue` management**.
+3.  **HR Operations**: Employee onboarding, `Payslip` processing, `LeaveRequest` management.
+4.  **Request & Approval Workflow**:
+    - **Employee**: Initiate `RequestForm`.
+    - **Department Head**: First-level approval for `RequestForm` from their department.
+    - **Administrator**: Second-level approval for `RequestForm` after Department Head.
+    - **Accountant**: Generate `Payment` from approved `RequestForm`.
+    - **Managing Director**: Final review/approval for high-value `Payment`s and `RequestForm`s, **and all project creations.**
+5.  **Client & Lead Management**: Tracking of clients and potential leads, linking them to `Projects` and `Revenue`.
+6.  **Reporting**: Role-specific dashboards and exportable reports (Leveraging data from all relevant interfaces).
+7.  **Document Management**: Project document repository with version control.
+8.  **Notifications**: Real-time alerts for approvals, deadlines, and updates, especially for pending approvals in the `RequestForm` and project workflows.
+
+### Technical Considerations
+-   **Database Design**: Normalized schema supporting multi-tenant architecture.
+-   **API Design**: RESTful endpoints with proper status codes and error handling.
+-   **Security**: Input validation, SQL injection prevention, XSS protection.
+-   **Performance**: Pagination for large datasets, caching for frequently accessed data.
+-   **Audit Trail**: Comprehensive logging for all user actions and data changes, crucial for tracking `RequestForm` and project approvals.
+
+### Integration Points
+-   **Accounting Systems**: For financial data synchronization.
+-   **Time Tracking**: For project time allocation and payroll.
+-   **Document Storage**: Cloud storage for project documents.
+-   **Communication**: Email/SMS notifications for approvals and updates.
+-   **Reporting**: Export capabilities for compliance and analysis.
+
+***
+
+## Coding Standards
+- Use consistent naming conventions reflecting the domain (projects, employees, departments).
+- Implement proper error handling with user-friendly messages.
+- Write unit tests for critical business logic.
+- Document API endpoints with clear examples.
+- Follow security best practices for construction industry compliance.
+- Implement proper logging for audit and debugging purposes.
+
+***
+
+## Future Enhancements
+-   **Mobile App**: Native mobile application for field workers.
+-   **Advanced Analytics**: Predictive analytics for project timelines and budgets.
+-   **Integration APIs**: Third-party integrations with construction tools.
+-   **Workflow Automation**: Automated approval processes and notifications.
+-   **Multi-Language Support**: Localization for international operations.

@@ -1,0 +1,300 @@
+---
+alwaysApply: true
+---
+Here's the project file structure in text format:
+
+```
+# Cursor Rules for React + TypeScript + Vite Project
+
+## Project Structure
+This is a React TypeScript project using Vite as the build tool with the following structure:
+- `/src/components/` - Reusable UI components
+- `/src/pages/` - Page components for routing
+- `/src/lib/` - Utility functions and configurations
+- `/src/types.ts` - TypeScript type definitions
+- `/src/router.tsx` - Application routing configuration
+
+## Component Guidelines
+
+### UI Components
+- Only use components from `/src/components/` directory or shadcn/ui library
+- Import shadcn components like: `import { Button } from '@/components/ui/button'`
+- Create custom components in appropriate subdirectories under `/src/components/`
+- Use TypeScript interfaces for all component props
+
+### Component Structure Example
+```tsx
+import React from 'react';
+import { Button } from '@/components/ui/button';
+
+interface ComponentProps {
+  title: string;
+  onClick?: () => void;
+}
+
+export const CustomComponent: React.FC<ComponentProps> = ({ title, onClick }) => {
+  return (
+    <div>
+      <h2>{title}</h2>
+      <Button onClick={onClick}>Click me</Button>
+    </div>
+  );
+};
+```
+
+## State Management - Zustand
+
+### Store Structure
+- Use Zustand for global state management
+- Always use `persist` middleware for data that needs persistence
+- Follow the established pattern for store creation
+
+### Auth Store Pattern
+```tsx
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+
+interface StoreState {
+  // State properties
+  user: User | null;
+  token: string | null;
+  // Actions
+  setUser: (user: User) => void;
+  logout: () => void;
+}
+
+export const useStore = create<StoreState>()(
+  persist(
+    (set, get) => ({
+      user: null,
+      token: null,
+      setUser: (user) => set({ user }),
+      logout: () => set({ user: null, token: null }),
+    }),
+    {
+      name: "store-name",
+      partialize: (state) =>
+        Object.fromEntries(
+          Object.entries(state).filter(([key]) => !['excludedKey'].includes(key))
+        ),
+    }
+  )
+);
+```
+
+## API Layer
+
+### API Controller Pattern
+- Use the established `ApiController` class pattern for API calls
+- All API methods should return typed responses
+- Handle authentication and token refresh automatically
+- Use the `ApiResponse<T>` interface for consistent API responses
+
+### API Usage Example
+```tsx
+import { apiController } from '@/lib/api';
+
+interface UserData {
+  id: string;
+  name: string;
+  email: string;
+}
+
+// In component or hook
+const fetchUser = async (id: string): Promise<UserData> => {
+  try {
+    const user = await apiController.get<UserData>(`/users/${id}`);
+    return user;
+  } catch (error) {
+    console.error('Failed to fetch user:', error);
+    throw error;
+  }
+};
+```
+
+## TypeScript Guidelines
+
+### Type Definitions
+- Define all types in `/src/types.ts` for shared types
+- Use interfaces for object shapes and component props
+- Use type unions for specific value sets
+- Export all types that might be used elsewhere
+
+### Type Examples
+```tsx
+// In types.ts
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  role: 'admin' | 'user';
+}
+
+export interface ApiResponse<T> {
+  ok: boolean;
+  data?: T;
+  message?: string;
+}
+
+export type AuthState = {
+  user: User | null;
+  token: string | null;
+  isAuthenticated: boolean | null;
+};
+```
+
+## Authentication & Authorization
+
+### Auth Store Usage
+- Use the established `useAuthStore` pattern
+- Handle Zitadel authentication through the store
+- Persist auth state excluding sensitive objects like `zitadel`
+- Always check authentication state before protected operations
+
+### Auth Implementation
+```tsx
+import { useAuthStore } from '@/store/auth';
+
+const ProtectedComponent = () => {
+  const { user, isAuthenticated, logout } = useAuthStore();
+
+  if (!isAuthenticated) {
+    return <div>Please log in</div>;
+  }
+
+  return (
+    <div>
+      <h1>Welcome, {user?.name}</h1>
+      <button onClick={logout}>Logout</button>
+    </div>
+  );
+};
+```
+
+## Page Structure
+
+### Page Components
+- Place all page components in `/src/pages/` with appropriate subdirectories
+- Use React Router for navigation
+- Each page should be a default export
+- Handle loading and error states appropriately
+
+### Page Example
+```tsx
+import React, { useEffect, useState } from 'react';
+import { useAuthStore } from '@/store/auth';
+import { apiController } from '@/lib/api';
+
+const DashboardPage: React.FC = () => {
+  const { user } = useAuthStore();
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await apiController.get('/dashboard');
+        setData(result);
+      } catch (error) {
+        console.error('Failed to fetch dashboard data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      {/* Dashboard content */}
+    </div>
+  );
+};
+
+export default DashboardPage;
+```
+
+## Error Handling
+
+### API Error Handling
+- Use try-catch blocks for async operations
+- Display user-friendly error messages
+- Log errors appropriately for debugging
+- Handle 401 errors automatically through the API controller
+
+### Error Handling Example
+```tsx
+const handleSubmit = async (data: FormData) => {
+  try {
+    await apiController.post('/submit', data);
+    // Success handling
+  } catch (error) {
+    if (error instanceof Error) {
+      setErrorMessage(error.message);
+    } else {
+      setErrorMessage('An unexpected error occurred');
+    }
+  }
+};
+```
+
+## Import Conventions
+
+### Import Order
+1. React and React-related imports
+2. Third-party libraries
+3. Internal components and utilities
+4. Types and interfaces
+5. Relative imports
+
+### Import Example
+```tsx
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { useAuthStore } from '@/store/auth';
+import { apiController } from '@/lib/api';
+import { User } from '@/types';
+```
+
+## Best Practices
+
+### General
+- Always use TypeScript strict mode
+- Prefer functional components over class components
+- Use proper error boundaries for error handling
+- Implement proper loading states for async operations
+- Follow React hooks rules and best practices
+
+### Performance
+- Use React.memo for expensive components
+- Implement proper dependency arrays for useEffect
+- Avoid unnecessary re-renders with proper state management
+- Use Zustand selectors to prevent unnecessary subscriptions
+
+### Security
+- Never store sensitive data in localStorage directly
+- Use the persist middleware partialize option to exclude sensitive data
+- Validate all user inputs
+- Handle authentication tokens securely through the API controller
+
+## Code Style
+
+### Naming Conventions
+- Use PascalCase for component names
+- Use camelCase for variables and functions
+- Use UPPER_SNAKE_CASE for constants
+- Use descriptive names that clearly indicate purpose
+
+### File Naming
+- Use kebab-case for file names
+- Use `.tsx` extension for components
+- Use `.ts` extension for utilities and types
+- Use `index.tsx` for main component exports
+
+This configuration ensures consistent code style and follows the established patterns in your project.
+```

@@ -1,0 +1,433 @@
+[
+  {
+    "id": "trash-1",
+    "messageId": "<msg-trash-001@company.com>",
+    "threadId": "thread-trash-001",
+    "subject": "Deleted: Spam Email - Unwanted Promotion",
+    "from": {
+      "email": "spam@unwanted.com",
+      "name": "Unwanted Sender"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [],
+    "hasAttachments": false,
+    "textBody": "This email was deleted as it was identified as spam. The content contained unwanted promotional material.",
+    "htmlBody": "<div><p>This email was deleted as it was identified as spam. The content contained unwanted promotional material.</p></div>",
+    "snippet": "This email was deleted as it was identified as spam...",
+    "date": "2024-01-15T08:00:00Z",
+    "receivedDate": "2024-01-15T08:01:00Z",
+    "status": "deleted",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["spam", "deleted"],
+    "priority": "normal",
+    "folder": "trash",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": true,
+    "deletedAt": "2024-01-15T08:05:00Z",
+    "createdAt": "2024-01-15T08:01:00Z",
+    "updatedAt": "2024-01-15T08:05:00Z"
+  },
+  {
+    "id": "trash-2",
+    "messageId": "<msg-trash-002@company.com>",
+    "threadId": "thread-trash-002",
+    "subject": "Deleted: Old Newsletter - December 2023",
+    "from": {
+      "email": "newsletter@company.com",
+      "name": "Company Newsletter"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "december-newsletter.pdf",
+        "contentType": "application/pdf",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "This newsletter from December 2023 was deleted as it is no longer relevant.",
+    "htmlBody": "<div><p>This newsletter from December 2023 was deleted as it is no longer relevant.</p></div>",
+    "snippet": "This newsletter from December 2023 was deleted as it is no longer relevant...",
+    "date": "2023-12-01T09:00:00Z",
+    "receivedDate": "2023-12-01T09:01:00Z",
+    "status": "deleted",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["newsletter", "deleted"],
+    "priority": "normal",
+    "folder": "trash",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": true,
+    "deletedAt": "2024-01-10T14:30:00Z",
+    "createdAt": "2023-12-01T09:01:00Z",
+    "updatedAt": "2024-01-10T14:30:00Z"
+  },
+  {
+    "id": "trash-3",
+    "messageId": "<msg-trash-003@company.com>",
+    "threadId": "thread-trash-003",
+    "subject": "Deleted: Outdated Meeting Invitation",
+    "from": {
+      "email": "calendar@company.com",
+      "name": "Calendar System"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [],
+    "hasAttachments": false,
+    "textBody": "This meeting invitation was deleted as the meeting has already taken place and is no longer relevant.",
+    "htmlBody": "<div><p>This meeting invitation was deleted as the meeting has already taken place and is no longer relevant.</p></div>",
+    "snippet": "This meeting invitation was deleted as the meeting has already taken place...",
+    "date": "2023-12-20T10:00:00Z",
+    "receivedDate": "2023-12-20T10:01:00Z",
+    "status": "deleted",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["meeting", "deleted"],
+    "priority": "normal",
+    "folder": "trash",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": true,
+    "deletedAt": "2024-01-08T16:45:00Z",
+    "createdAt": "2023-12-20T10:01:00Z",
+    "updatedAt": "2024-01-08T16:45:00Z"
+  },
+  {
+    "id": "trash-4",
+    "messageId": "<msg-trash-004@company.com>",
+    "threadId": "thread-trash-004",
+    "subject": "Deleted: Failed Draft - Incomplete Message",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "team@company.com",
+        "name": "Development Team"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [],
+    "hasAttachments": false,
+    "textBody": "This draft was deleted as it was incomplete and abandoned.",
+    "htmlBody": "<div><p>This draft was deleted as it was incomplete and abandoned.</p></div>",
+    "snippet": "This draft was deleted as it was incomplete and abandoned...",
+    "date": "2024-01-05T15:30:00Z",
+    "receivedDate": "2024-01-05T15:30:00Z",
+    "status": "deleted",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["draft", "deleted"],
+    "priority": "normal",
+    "folder": "trash",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": true,
+    "isEncrypted": false,
+    "processingStatus": "pending",
+    "syncStatus": "synced",
+    "isDeleted": true,
+    "deletedAt": "2024-01-05T16:00:00Z",
+    "createdAt": "2024-01-05T15:30:00Z",
+    "updatedAt": "2024-01-05T16:00:00Z"
+  },
+  {
+    "id": "trash-5",
+    "messageId": "<msg-trash-005@company.com>",
+    "threadId": "thread-trash-005",
+    "subject": "Deleted: Duplicate Email - System Error",
+    "from": {
+      "email": "system@company.com",
+      "name": "System Notification"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [],
+    "hasAttachments": false,
+    "textBody": "This duplicate email was deleted as it was sent multiple times due to a system error.",
+    "htmlBody": "<div><p>This duplicate email was deleted as it was sent multiple times due to a system error.</p></div>",
+    "snippet": "This duplicate email was deleted as it was sent multiple times due to a system error...",
+    "date": "2024-01-12T11:00:00Z",
+    "receivedDate": "2024-01-12T11:01:00Z",
+    "status": "deleted",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["duplicate", "deleted"],
+    "priority": "normal",
+    "folder": "trash",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": true,
+    "deletedAt": "2024-01-12T11:10:00Z",
+    "createdAt": "2024-01-12T11:01:00Z",
+    "updatedAt": "2024-01-12T11:10:00Z"
+  },
+  {
+    "id": "trash-6",
+    "messageId": "<msg-trash-006@company.com>",
+    "threadId": "thread-trash-006",
+    "subject": "Deleted: Old Project Update - Completed",
+    "from": {
+      "email": "project-manager@company.com",
+      "name": "Project Manager"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "old-update.pdf",
+        "contentType": "application/pdf",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "This project update was deleted as the project has been completed and the information is no longer current.",
+    "htmlBody": "<div><p>This project update was deleted as the project has been completed and the information is no longer current.</p></div>",
+    "snippet": "This project update was deleted as the project has been completed and the information...",
+    "date": "2023-11-15T14:00:00Z",
+    "receivedDate": "2023-11-15T14:01:00Z",
+    "status": "deleted",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["project", "deleted"],
+    "priority": "normal",
+    "folder": "trash",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": true,
+    "deletedAt": "2024-01-06T12:20:00Z",
+    "createdAt": "2023-11-15T14:01:00Z",
+    "updatedAt": "2024-01-06T12:20:00Z"
+  },
+  {
+    "id": "trash-7",
+    "messageId": "<msg-trash-007@company.com>",
+    "threadId": "thread-trash-007",
+    "subject": "Deleted: Expired Security Alert",
+    "from": {
+      "email": "security@company.com",
+      "name": "Security Team"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [],
+    "hasAttachments": false,
+    "textBody": "This security alert was deleted as the issue has been resolved and the alert is no longer relevant.",
+    "htmlBody": "<div><p>This security alert was deleted as the issue has been resolved and the alert is no longer relevant.</p></div>",
+    "snippet": "This security alert was deleted as the issue has been resolved and the alert is no longer relevant...",
+    "date": "2023-12-10T09:00:00Z",
+    "receivedDate": "2023-12-10T09:01:00Z",
+    "status": "deleted",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["security", "deleted"],
+    "priority": "normal",
+    "folder": "trash",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": true,
+    "deletedAt": "2024-01-04T10:15:00Z",
+    "createdAt": "2023-12-10T09:01:00Z",
+    "updatedAt": "2024-01-04T10:15:00Z"
+  },
+  {
+    "id": "trash-8",
+    "messageId": "<msg-trash-008@company.com>",
+    "threadId": "thread-trash-008",
+    "subject": "Deleted: Cancelled Event Notification",
+    "from": {
+      "email": "events@company.com",
+      "name": "Events Team"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [],
+    "hasAttachments": false,
+    "textBody": "This event notification was deleted as the event has been cancelled and is no longer relevant.",
+    "htmlBody": "<div><p>This event notification was deleted as the event has been cancelled and is no longer relevant.</p></div>",
+    "snippet": "This event notification was deleted as the event has been cancelled and is no longer relevant...",
+    "date": "2023-12-25T16:00:00Z",
+    "receivedDate": "2023-12-25T16:01:00Z",
+    "status": "deleted",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["event", "deleted"],
+    "priority": "normal",
+    "folder": "trash",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": true,
+    "deletedAt": "2024-01-02T14:30:00Z",
+    "createdAt": "2023-12-25T16:01:00Z",
+    "updatedAt": "2024-01-02T14:30:00Z"
+  },
+  {
+    "id": "trash-9",
+    "messageId": "<msg-trash-009@company.com>",
+    "threadId": "thread-trash-009",
+    "subject": "Deleted: Outdated Policy Update",
+    "from": {
+      "email": "hr@company.com",
+      "name": "HR Department"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "old-policy.pdf",
+        "contentType": "application/pdf",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "This policy update was deleted as it has been superseded by a newer version and is no longer current.",
+    "htmlBody": "<div><p>This policy update was deleted as it has been superseded by a newer version and is no longer current.</p></div>",
+    "snippet": "This policy update was deleted as it has been superseded by a newer version and is no longer current...",
+    "date": "2023-11-30T12:00:00Z",
+    "receivedDate": "2023-11-30T12:01:00Z",
+    "status": "deleted",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["policy", "deleted"],
+    "priority": "normal",
+    "folder": "trash",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": true,
+    "deletedAt": "2024-01-01T09:45:00Z",
+    "createdAt": "2023-11-30T12:01:00Z",
+    "updatedAt": "2024-01-01T09:45:00Z"
+  },
+  {
+    "id": "trash-10",
+    "messageId": "<msg-trash-010@company.com>",
+    "threadId": "thread-trash-010",
+    "subject": "Deleted: Failed System Notification",
+    "from": {
+      "email": "system@company.com",
+      "name": "System Notification"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [],
+    "hasAttachments": false,
+    "textBody": "This system notification was deleted as it contained an error and was sent in error.",
+    "htmlBody": "<div><p>This system notification was deleted as it contained an error and was sent in error.</p></div>",
+    "snippet": "This system notification was deleted as it contained an error and was sent in error...",
+    "date": "2024-01-14T07:00:00Z",
+    "receivedDate": "2024-01-14T07:01:00Z",
+    "status": "deleted",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["system", "deleted"],
+    "priority": "normal",
+    "folder": "trash",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": true,
+    "deletedAt": "2024-01-14T07:05:00Z",
+    "createdAt": "2024-01-14T07:01:00Z",
+    "updatedAt": "2024-01-14T07:05:00Z"
+  }
+] 

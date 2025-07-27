@@ -1,0 +1,557 @@
+[
+  {
+    "id": "draft-1",
+    "messageId": "<msg-draft-001@company.com>",
+    "threadId": "thread-draft-001",
+    "subject": "Draft: New Feature Proposal",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "product-manager@company.com",
+        "name": "Product Manager"
+      }
+    ],
+    "cc": [
+      {
+        "email": "tech-lead@company.com",
+        "name": "Tech Lead"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "feature-spec.pdf",
+        "contentType": "application/pdf",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi Product Manager,\n\nI've been working on a proposal for a new feature that could significantly improve our user experience. The feature would include:\n\n- Advanced search functionality\n- Real-time notifications\n- Enhanced reporting tools\n\nI'm still working on the technical specifications and cost estimates. I'll send the complete proposal once I have all the details.\n\nLet me know if you'd like to discuss this further.\n\nRegards,\nJohn",
+    "htmlBody": "<div><p>Hi Product Manager,</p><p>I've been working on a proposal for a new feature that could significantly improve our user experience. The feature would include:</p><ul><li>Advanced search functionality</li><li>Real-time notifications</li><li>Enhanced reporting tools</li></ul><p>I'm still working on the technical specifications and cost estimates. I'll send the complete proposal once I have all the details.</p><p>Let me know if you'd like to discuss this further.</p><p>Regards,<br/>John</p></div>",
+    "snippet": "I've been working on a proposal for a new feature that could significantly improve our user experience...",
+    "date": "2024-01-10T15:30:00Z",
+    "receivedDate": "2024-01-10T15:30:00Z",
+    "status": "draft",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["draft", "feature"],
+    "priority": "normal",
+    "folder": "drafts",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": true,
+    "draftData": {
+      "lastEditedAt": "2024-01-10T15:30:00Z",
+      "autoSaveVersion": 3
+    },
+    "isEncrypted": false,
+    "processingStatus": "pending",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-10T15:30:00Z",
+    "updatedAt": "2024-01-10T15:30:00Z"
+  },
+  {
+    "id": "draft-2",
+    "messageId": "<msg-draft-002@company.com>",
+    "threadId": "thread-draft-002",
+    "subject": "Draft: Client Presentation - Project Beta",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "client@example.com",
+        "name": "Client"
+      }
+    ],
+    "cc": [
+      {
+        "email": "jane.smith@example.com",
+        "name": "Jane Smith"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "presentation-draft.pptx",
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+        "size": 4096,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Dear Client,\n\nI'm preparing a comprehensive presentation for Project Beta that will cover:\n\n- Project overview and objectives\n- Current progress and milestones\n- Technical achievements\n- Next steps and timeline\n- Budget status\n\nI'm still finalizing some sections and will send the complete presentation once it's ready.\n\nBest regards,\nJohn",
+    "htmlBody": "<div><p>Dear Client,</p><p>I'm preparing a comprehensive presentation for <strong>Project Beta</strong> that will cover:</p><ul><li>Project overview and objectives</li><li>Current progress and milestones</li><li>Technical achievements</li><li>Next steps and timeline</li><li>Budget status</li></ul><p>I'm still finalizing some sections and will send the complete presentation once it's ready.</p><p>Best regards,<br/>John</p></div>",
+    "snippet": "I'm preparing a comprehensive presentation for Project Beta that will cover: Project overview and objectives...",
+    "date": "2024-01-09T14:20:00Z",
+    "receivedDate": "2024-01-09T14:20:00Z",
+    "status": "draft",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["draft", "presentation"],
+    "priority": "normal",
+    "folder": "drafts",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": true,
+    "draftData": {
+      "lastEditedAt": "2024-01-09T14:20:00Z",
+      "autoSaveVersion": 5
+    },
+    "isEncrypted": false,
+    "processingStatus": "pending",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-09T14:20:00Z",
+    "updatedAt": "2024-01-09T14:20:00Z"
+  },
+  {
+    "id": "draft-3",
+    "messageId": "<msg-draft-003@company.com>",
+    "threadId": "thread-draft-003",
+    "subject": "Draft: Team Performance Review",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "hr@company.com",
+        "name": "HR Department"
+      }
+    ],
+    "cc": [
+      {
+        "email": "manager@company.com",
+        "name": "Manager"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "performance-review.docx",
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 2048,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi HR Team,\n\nI'm drafting a comprehensive team performance review for Q4 2023. The review includes:\n\n- Individual performance assessments\n- Team collaboration metrics\n- Project delivery success rates\n- Areas for improvement\n- Recommendations for Q1 2024\n\nI need to gather some additional data before finalizing the report.\n\nRegards,\nJohn",
+    "htmlBody": "<div><p>Hi HR Team,</p><p>I'm drafting a comprehensive team performance review for <strong>Q4 2023</strong>. The review includes:</p><ul><li>Individual performance assessments</li><li>Team collaboration metrics</li><li>Project delivery success rates</li><li>Areas for improvement</li><li>Recommendations for Q1 2024</li></ul><p>I need to gather some additional data before finalizing the report.</p><p>Regards,<br/>John</p></div>",
+    "snippet": "I'm drafting a comprehensive team performance review for Q4 2023. The review includes: Individual performance assessments...",
+    "date": "2024-01-08T16:45:00Z",
+    "receivedDate": "2024-01-08T16:45:00Z",
+    "status": "draft",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["draft", "performance"],
+    "priority": "normal",
+    "folder": "drafts",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": true,
+    "draftData": {
+      "lastEditedAt": "2024-01-08T16:45:00Z",
+      "autoSaveVersion": 2
+    },
+    "isEncrypted": false,
+    "processingStatus": "pending",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-08T16:45:00Z",
+    "updatedAt": "2024-01-08T16:45:00Z"
+  },
+  {
+    "id": "draft-4",
+    "messageId": "<msg-draft-004@company.com>",
+    "threadId": "thread-draft-004",
+    "subject": "Draft: Budget Request - Q2 2024",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "finance@company.com",
+        "name": "Finance Team"
+      }
+    ],
+    "cc": [
+      {
+        "email": "ceo@company.com",
+        "name": "CEO"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "budget-request.xlsx",
+        "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "size": 3072,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Dear Finance Team,\n\nI'm preparing a budget request for Q2 2024 that includes:\n\n- New development tools and licenses\n- Team training and certifications\n- Hardware upgrades\n- Software subscriptions\n- Conference attendance\n\nI'm still calculating the total costs and will submit the final request once all figures are confirmed.\n\nBest regards,\nJohn",
+    "htmlBody": "<div><p>Dear Finance Team,</p><p>I'm preparing a budget request for <strong>Q2 2024</strong> that includes:</p><ul><li>New development tools and licenses</li><li>Team training and certifications</li><li>Hardware upgrades</li><li>Software subscriptions</li><li>Conference attendance</li></ul><p>I'm still calculating the total costs and will submit the final request once all figures are confirmed.</p><p>Best regards,<br/>John</p></div>",
+    "snippet": "I'm preparing a budget request for Q2 2024 that includes: New development tools and licenses...",
+    "date": "2024-01-07T13:30:00Z",
+    "receivedDate": "2024-01-07T13:30:00Z",
+    "status": "draft",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["draft", "budget"],
+    "priority": "normal",
+    "folder": "drafts",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": true,
+    "draftData": {
+      "lastEditedAt": "2024-01-07T13:30:00Z",
+      "autoSaveVersion": 4
+    },
+    "isEncrypted": false,
+    "processingStatus": "pending",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-07T13:30:00Z",
+    "updatedAt": "2024-01-07T13:30:00Z"
+  },
+  {
+    "id": "draft-5",
+    "messageId": "<msg-draft-005@company.com>",
+    "threadId": "thread-draft-005",
+    "subject": "Draft: Technical Architecture Review",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "tech-lead@company.com",
+        "name": "Tech Lead"
+      }
+    ],
+    "cc": [
+      {
+        "email": "senior-dev@company.com",
+        "name": "Senior Developer"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "architecture-review.pdf",
+        "contentType": "application/pdf",
+        "size": 5120,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi Tech Lead,\n\nI'm working on a technical architecture review document that covers:\n\n- Current system architecture\n- Performance bottlenecks identified\n- Scalability concerns\n- Recommended improvements\n- Migration strategy\n\nI need to complete the performance analysis section before finalizing the document.\n\nRegards,\nJohn",
+    "htmlBody": "<div><p>Hi Tech Lead,</p><p>I'm working on a technical architecture review document that covers:</p><ul><li>Current system architecture</li><li>Performance bottlenecks identified</li><li>Scalability concerns</li><li>Recommended improvements</li><li>Migration strategy</li></ul><p>I need to complete the performance analysis section before finalizing the document.</p><p>Regards,<br/>John</p></div>",
+    "snippet": "I'm working on a technical architecture review document that covers: Current system architecture...",
+    "date": "2024-01-06T11:15:00Z",
+    "receivedDate": "2024-01-06T11:15:00Z",
+    "status": "draft",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["draft", "architecture"],
+    "priority": "normal",
+    "folder": "drafts",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": true,
+    "draftData": {
+      "lastEditedAt": "2024-01-06T11:15:00Z",
+      "autoSaveVersion": 6
+    },
+    "isEncrypted": false,
+    "processingStatus": "pending",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-06T11:15:00Z",
+    "updatedAt": "2024-01-06T11:15:00Z"
+  },
+  {
+    "id": "draft-6",
+    "messageId": "<msg-draft-006@company.com>",
+    "threadId": "thread-draft-006",
+    "subject": "Draft: Team Meeting Minutes",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "team@company.com",
+        "name": "Development Team"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "meeting-minutes.docx",
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi Team,\n\nHere are the minutes from our recent team meeting:\n\nAgenda Items:\n- Project status updates\n- Code review process improvements\n- Sprint planning discussion\n- Open issues and blockers\n\nAction Items:\n- Complete pending code reviews by Friday\n- Update documentation for new features\n- Schedule follow-up meeting for unresolved issues\n\nI'm still adding some details and will send the final version soon.\n\nJohn",
+    "htmlBody": "<div><p>Hi Team,</p><p>Here are the minutes from our recent team meeting:</p><h3>Agenda Items:</h3><ul><li>Project status updates</li><li>Code review process improvements</li><li>Sprint planning discussion</li><li>Open issues and blockers</li></ul><h3>Action Items:</h3><ul><li>Complete pending code reviews by Friday</li><li>Update documentation for new features</li><li>Schedule follow-up meeting for unresolved issues</li></ul><p>I'm still adding some details and will send the final version soon.</p><p>John</p></div>",
+    "snippet": "Here are the minutes from our recent team meeting: Agenda Items: Project status updates...",
+    "date": "2024-01-05T15:45:00Z",
+    "receivedDate": "2024-01-05T15:45:00Z",
+    "status": "draft",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["draft", "minutes"],
+    "priority": "normal",
+    "folder": "drafts",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": true,
+    "draftData": {
+      "lastEditedAt": "2024-01-05T15:45:00Z",
+      "autoSaveVersion": 2
+    },
+    "isEncrypted": false,
+    "processingStatus": "pending",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-05T15:45:00Z",
+    "updatedAt": "2024-01-05T15:45:00Z"
+  },
+  {
+    "id": "draft-7",
+    "messageId": "<msg-draft-007@company.com>",
+    "threadId": "thread-draft-007",
+    "subject": "Draft: Security Audit Report",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "security@company.com",
+        "name": "Security Team"
+      }
+    ],
+    "cc": [
+      {
+        "email": "it-manager@company.com",
+        "name": "IT Manager"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "security-audit.pdf",
+        "contentType": "application/pdf",
+        "size": 4096,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi Security Team,\n\nI'm preparing a security audit report for our recent assessment. The report includes:\n\n- Vulnerability assessment results\n- Penetration testing findings\n- Compliance review\n- Risk assessment\n- Remediation recommendations\n\nI need to finalize the risk assessment section before completing the report.\n\nRegards,\nJohn",
+    "htmlBody": "<div><p>Hi Security Team,</p><p>I'm preparing a security audit report for our recent assessment. The report includes:</p><ul><li>Vulnerability assessment results</li><li>Penetration testing findings</li><li>Compliance review</li><li>Risk assessment</li><li>Remediation recommendations</li></ul><p>I need to finalize the risk assessment section before completing the report.</p><p>Regards,<br/>John</p></div>",
+    "snippet": "I'm preparing a security audit report for our recent assessment. The report includes: Vulnerability assessment results...",
+    "date": "2024-01-04T12:30:00Z",
+    "receivedDate": "2024-01-04T12:30:00Z",
+    "status": "draft",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["draft", "security"],
+    "priority": "normal",
+    "folder": "drafts",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": true,
+    "draftData": {
+      "lastEditedAt": "2024-01-04T12:30:00Z",
+      "autoSaveVersion": 3
+    },
+    "isEncrypted": false,
+    "processingStatus": "pending",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-04T12:30:00Z",
+    "updatedAt": "2024-01-04T12:30:00Z"
+  },
+  {
+    "id": "draft-8",
+    "messageId": "<msg-draft-008@company.com>",
+    "threadId": "thread-draft-008",
+    "subject": "Draft: Client Proposal - Project Gamma",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "client@example.com",
+        "name": "Client"
+      }
+    ],
+    "cc": [
+      {
+        "email": "sales@company.com",
+        "name": "Sales Team"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "proposal-draft.pdf",
+        "contentType": "application/pdf",
+        "size": 3072,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Dear Client,\n\nThank you for the opportunity to propose Project Gamma. Our proposal includes:\n\n- Project overview and objectives\n- Technical approach and methodology\n- Timeline and milestones\n- Team composition and expertise\n- Budget breakdown and payment terms\n\nI'm still finalizing the technical specifications and will send the complete proposal once ready.\n\nBest regards,\nJohn",
+    "htmlBody": "<div><p>Dear Client,</p><p>Thank you for the opportunity to propose <strong>Project Gamma</strong>. Our proposal includes:</p><ul><li>Project overview and objectives</li><li>Technical approach and methodology</li><li>Timeline and milestones</li><li>Team composition and expertise</li><li>Budget breakdown and payment terms</li></ul><p>I'm still finalizing the technical specifications and will send the complete proposal once ready.</p><p>Best regards,<br/>John</p></div>",
+    "snippet": "Thank you for the opportunity to propose Project Gamma. Our proposal includes: Project overview and objectives...",
+    "date": "2024-01-03T14:15:00Z",
+    "receivedDate": "2024-01-03T14:15:00Z",
+    "status": "draft",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["draft", "proposal"],
+    "priority": "normal",
+    "folder": "drafts",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": true,
+    "draftData": {
+      "lastEditedAt": "2024-01-03T14:15:00Z",
+      "autoSaveVersion": 4
+    },
+    "isEncrypted": false,
+    "processingStatus": "pending",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-03T14:15:00Z",
+    "updatedAt": "2024-01-03T14:15:00Z"
+  },
+  {
+    "id": "draft-9",
+    "messageId": "<msg-draft-009@company.com>",
+    "threadId": "thread-draft-009",
+    "subject": "Draft: Training Program Outline",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "hr@company.com",
+        "name": "HR Department"
+      }
+    ],
+    "cc": [
+      {
+        "email": "training@company.com",
+        "name": "Training Team"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "training-outline.docx",
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 2048,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi HR Team,\n\nI'm developing a training program outline for our development team. The program includes:\n\n- Technical skills development\n- Best practices training\n- Tool and technology workshops\n- Soft skills enhancement\n- Certification preparation\n\nI need to finalize the schedule and resource requirements before completing the outline.\n\nRegards,\nJohn",
+    "htmlBody": "<div><p>Hi HR Team,</p><p>I'm developing a training program outline for our development team. The program includes:</p><ul><li>Technical skills development</li><li>Best practices training</li><li>Tool and technology workshops</li><li>Soft skills enhancement</li><li>Certification preparation</li></ul><p>I need to finalize the schedule and resource requirements before completing the outline.</p><p>Regards,<br/>John</p></div>",
+    "snippet": "I'm developing a training program outline for our development team. The program includes: Technical skills development...",
+    "date": "2024-01-02T10:30:00Z",
+    "receivedDate": "2024-01-02T10:30:00Z",
+    "status": "draft",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["draft", "training"],
+    "priority": "normal",
+    "folder": "drafts",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": true,
+    "draftData": {
+      "lastEditedAt": "2024-01-02T10:30:00Z",
+      "autoSaveVersion": 2
+    },
+    "isEncrypted": false,
+    "processingStatus": "pending",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-02T10:30:00Z",
+    "updatedAt": "2024-01-02T10:30:00Z"
+  },
+  {
+    "id": "draft-10",
+    "messageId": "<msg-draft-010@company.com>",
+    "threadId": "thread-draft-010",
+    "subject": "Draft: Quarterly Report Summary",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "management@company.com",
+        "name": "Management Team"
+      }
+    ],
+    "cc": [
+      {
+        "email": "stakeholders@company.com",
+        "name": "Stakeholders"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "quarterly-summary.pdf",
+        "contentType": "application/pdf",
+        "size": 4096,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Dear Management Team,\n\nI'm preparing a quarterly report summary that covers:\n\n- Project delivery metrics\n- Team performance highlights\n- Financial overview\n- Challenges and solutions\n- Strategic recommendations\n\nI'm still gathering some final metrics and will complete the report soon.\n\nBest regards,\nJohn",
+    "htmlBody": "<div><p>Dear Management Team,</p><p>I'm preparing a quarterly report summary that covers:</p><ul><li>Project delivery metrics</li><li>Team performance highlights</li><li>Financial overview</li><li>Challenges and solutions</li><li>Strategic recommendations</li></ul><p>I'm still gathering some final metrics and will complete the report soon.</p><p>Best regards,<br/>John</p></div>",
+    "snippet": "I'm preparing a quarterly report summary that covers: Project delivery metrics...",
+    "date": "2024-01-01T16:00:00Z",
+    "receivedDate": "2024-01-01T16:00:00Z",
+    "status": "draft",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["draft", "report"],
+    "priority": "normal",
+    "folder": "drafts",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": true,
+    "draftData": {
+      "lastEditedAt": "2024-01-01T16:00:00Z",
+      "autoSaveVersion": 5
+    },
+    "isEncrypted": false,
+    "processingStatus": "pending",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-01T16:00:00Z",
+    "updatedAt": "2024-01-01T16:00:00Z"
+  }
+] 

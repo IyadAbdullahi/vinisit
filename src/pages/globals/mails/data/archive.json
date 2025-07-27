@@ -1,0 +1,497 @@
+[
+  {
+    "id": "archive-1",
+    "messageId": "<msg-archive-001@company.com>",
+    "threadId": "thread-archive-001",
+    "subject": "Old Project Documentation - Legacy System",
+    "from": {
+      "email": "tech-support@company.com",
+      "name": "Tech Support"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "legacy-docs.pdf",
+        "contentType": "application/pdf",
+        "size": 2048,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nHere are the legacy system documentation files you requested. These documents contain the technical specifications and implementation details for the old system that was replaced last year.\n\nPlease note that these documents are for reference only as the system has been decommissioned.\n\nBest regards,\nTech Support",
+    "htmlBody": "<div><p>Hi John,</p><p>Here are the legacy system documentation files you requested. These documents contain the technical specifications and implementation details for the old system that was replaced last year.</p><p>Please note that these documents are for reference only as the system has been decommissioned.</p><p>Best regards,<br/>Tech Support</p></div>",
+    "snippet": "Here are the legacy system documentation files you requested. These documents contain the technical specifications...",
+    "date": "2023-12-15T09:00:00Z",
+    "receivedDate": "2023-12-15T09:01:00Z",
+    "status": "archived",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["legacy", "documentation"],
+    "priority": "normal",
+    "folder": "archive",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2023-12-15T09:01:00Z",
+    "updatedAt": "2023-12-15T09:01:00Z"
+  },
+  {
+    "id": "archive-2",
+    "messageId": "<msg-archive-002@company.com>",
+    "threadId": "thread-archive-002",
+    "subject": "Completed Project - Phase 1 Documentation",
+    "from": {
+      "email": "project-manager@company.com",
+      "name": "Project Manager"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [
+      {
+        "email": "team@company.com",
+        "name": "Development Team"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "phase1-completion.pdf",
+        "contentType": "application/pdf",
+        "size": 3072,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nPhase 1 of the project has been successfully completed and archived. All deliverables have been met and the client has signed off on the work.\n\nPlease review the attached completion documentation for your records.\n\nBest regards,\nProject Manager",
+    "htmlBody": "<div><p>Hi John,</p><p><strong>Phase 1</strong> of the project has been successfully completed and archived. All deliverables have been met and the client has signed off on the work.</p><p>Please review the attached completion documentation for your records.</p><p>Best regards,<br/>Project Manager</p></div>",
+    "snippet": "Phase 1 of the project has been successfully completed and archived. All deliverables have been met...",
+    "date": "2023-12-10T14:30:00Z",
+    "receivedDate": "2023-12-10T14:31:00Z",
+    "status": "archived",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["completed", "project"],
+    "priority": "normal",
+    "folder": "archive",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2023-12-10T14:31:00Z",
+    "updatedAt": "2023-12-10T14:31:00Z"
+  },
+  {
+    "id": "archive-3",
+    "messageId": "<msg-archive-003@company.com>",
+    "threadId": "thread-archive-003",
+    "subject": "Old Meeting Minutes - Q3 2023",
+    "from": {
+      "email": "admin@company.com",
+      "name": "Administrator"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "q3-meeting-minutes.pdf",
+        "contentType": "application/pdf",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nHere are the archived meeting minutes from Q3 2023. These documents have been moved to the archive as they are no longer current.\n\nPlease let me know if you need access to any specific information from these records.\n\nRegards,\nAdministrator",
+    "htmlBody": "<div><p>Hi John,</p><p>Here are the archived meeting minutes from <strong>Q3 2023</strong>. These documents have been moved to the archive as they are no longer current.</p><p>Please let me know if you need access to any specific information from these records.</p><p>Regards,<br/>Administrator</p></div>",
+    "snippet": "Here are the archived meeting minutes from Q3 2023. These documents have been moved to the archive...",
+    "date": "2023-12-05T11:20:00Z",
+    "receivedDate": "2023-12-05T11:21:00Z",
+    "status": "archived",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["archived", "minutes"],
+    "priority": "normal",
+    "folder": "archive",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2023-12-05T11:21:00Z",
+    "updatedAt": "2023-12-05T11:21:00Z"
+  },
+  {
+    "id": "archive-4",
+    "messageId": "<msg-archive-004@company.com>",
+    "threadId": "thread-archive-004",
+    "subject": "Completed Training Program - Advanced JavaScript",
+    "from": {
+      "email": "training@company.com",
+      "name": "Training Team"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [
+      {
+        "email": "hr@company.com",
+        "name": "HR Department"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "training-certificate.pdf",
+        "contentType": "application/pdf",
+        "size": 512,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nCongratulations on completing the Advanced JavaScript training program! Your certificate has been generated and is attached to this email.\n\nThis training record has been archived as the program has concluded.\n\nBest regards,\nTraining Team",
+    "htmlBody": "<div><p>Hi John,</p><p>Congratulations on completing the <strong>Advanced JavaScript</strong> training program! Your certificate has been generated and is attached to this email.</p><p>This training record has been archived as the program has concluded.</p><p>Best regards,<br/>Training Team</p></div>",
+    "snippet": "Congratulations on completing the Advanced JavaScript training program! Your certificate has been generated...",
+    "date": "2023-12-01T16:45:00Z",
+    "receivedDate": "2023-12-01T16:46:00Z",
+    "status": "archived",
+    "isStarred": true,
+    "isImportant": false,
+    "labels": ["training", "completed"],
+    "priority": "normal",
+    "folder": "archive",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2023-12-01T16:46:00Z",
+    "updatedAt": "2023-12-01T16:46:00Z"
+  },
+  {
+    "id": "archive-5",
+    "messageId": "<msg-archive-005@company.com>",
+    "threadId": "thread-archive-005",
+    "subject": "Old Bug Report - Resolved Issues",
+    "from": {
+      "email": "qa-team@company.com",
+      "name": "QA Team"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "resolved-bugs.pdf",
+        "contentType": "application/pdf",
+        "size": 1536,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nHere are the archived bug reports from the previous release. All issues have been resolved and the reports have been moved to the archive.\n\nThese documents are kept for reference and audit purposes.\n\nRegards,\nQA Team",
+    "htmlBody": "<div><p>Hi John,</p><p>Here are the archived bug reports from the previous release. All issues have been resolved and the reports have been moved to the archive.</p><p>These documents are kept for reference and audit purposes.</p><p>Regards,<br/>QA Team</p></div>",
+    "snippet": "Here are the archived bug reports from the previous release. All issues have been resolved and the reports...",
+    "date": "2023-11-28T13:15:00Z",
+    "receivedDate": "2023-11-28T13:16:00Z",
+    "status": "archived",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["bugs", "resolved"],
+    "priority": "normal",
+    "folder": "archive",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2023-11-28T13:16:00Z",
+    "updatedAt": "2023-11-28T13:16:00Z"
+  },
+  {
+    "id": "archive-6",
+    "messageId": "<msg-archive-006@company.com>",
+    "threadId": "thread-archive-006",
+    "subject": "Completed Performance Review - 2023",
+    "from": {
+      "email": "hr@company.com",
+      "name": "HR Department"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [
+      {
+        "email": "manager@company.com",
+        "name": "Manager"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "performance-review-2023.pdf",
+        "contentType": "application/pdf",
+        "size": 2048,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Dear John,\n\nYour 2023 performance review has been completed and archived. The review process has concluded and all documentation has been finalized.\n\nPlease keep this record for your personal files.\n\nBest regards,\nHR Department",
+    "htmlBody": "<div><p>Dear John,</p><p>Your <strong>2023 performance review</strong> has been completed and archived. The review process has concluded and all documentation has been finalized.</p><p>Please keep this record for your personal files.</p><p>Best regards,<br/>HR Department</p></div>",
+    "snippet": "Your 2023 performance review has been completed and archived. The review process has concluded...",
+    "date": "2023-11-25T10:30:00Z",
+    "receivedDate": "2023-11-25T10:31:00Z",
+    "status": "archived",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["performance", "review"],
+    "priority": "normal",
+    "folder": "archive",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2023-11-25T10:31:00Z",
+    "updatedAt": "2023-11-25T10:31:00Z"
+  },
+  {
+    "id": "archive-7",
+    "messageId": "<msg-archive-007@company.com>",
+    "threadId": "thread-archive-007",
+    "subject": "Old Project Budget - Completed Phase",
+    "from": {
+      "email": "finance@company.com",
+      "name": "Finance Team"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "budget-final.pdf",
+        "contentType": "application/pdf",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nThe budget documentation for the completed project phase has been archived. All financial records have been finalized and moved to the archive for record keeping.\n\nPlease retain this documentation for audit purposes.\n\nRegards,\nFinance Team",
+    "htmlBody": "<div><p>Hi John,</p><p>The budget documentation for the completed project phase has been archived. All financial records have been finalized and moved to the archive for record keeping.</p><p>Please retain this documentation for audit purposes.</p><p>Regards,<br/>Finance Team</p></div>",
+    "snippet": "The budget documentation for the completed project phase has been archived. All financial records have been finalized...",
+    "date": "2023-11-20T14:45:00Z",
+    "receivedDate": "2023-11-20T14:46:00Z",
+    "status": "archived",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["budget", "completed"],
+    "priority": "normal",
+    "folder": "archive",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2023-11-20T14:46:00Z",
+    "updatedAt": "2023-11-20T14:46:00Z"
+  },
+  {
+    "id": "archive-8",
+    "messageId": "<msg-archive-008@company.com>",
+    "threadId": "thread-archive-008",
+    "subject": "Completed Client Project - Final Documentation",
+    "from": {
+      "email": "client@example.com",
+      "name": "Client"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [
+      {
+        "email": "project-manager@company.com",
+        "name": "Project Manager"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "final-deliverables.pdf",
+        "contentType": "application/pdf",
+        "size": 4096,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nThank you for the excellent work on our project. The final deliverables have been received and the project has been successfully completed.\n\nAll project documentation has been archived as the engagement has concluded.\n\nBest regards,\nClient Team",
+    "htmlBody": "<div><p>Hi John,</p><p>Thank you for the excellent work on our project. The final deliverables have been received and the project has been successfully completed.</p><p>All project documentation has been archived as the engagement has concluded.</p><p>Best regards,<br/>Client Team</p></div>",
+    "snippet": "Thank you for the excellent work on our project. The final deliverables have been received and the project...",
+    "date": "2023-11-15T11:20:00Z",
+    "receivedDate": "2023-11-15T11:21:00Z",
+    "status": "archived",
+    "isStarred": true,
+    "isImportant": false,
+    "labels": ["client", "completed"],
+    "priority": "normal",
+    "folder": "archive",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2023-11-15T11:21:00Z",
+    "updatedAt": "2023-11-15T11:21:00Z"
+  },
+  {
+    "id": "archive-9",
+    "messageId": "<msg-archive-009@company.com>",
+    "threadId": "thread-archive-009",
+    "subject": "Old System Migration - Completed",
+    "from": {
+      "email": "it-support@company.com",
+      "name": "IT Support"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "migration-report.pdf",
+        "contentType": "application/pdf",
+        "size": 2048,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nThe system migration project has been completed and all related documentation has been archived. The old system has been successfully decommissioned and the new system is fully operational.\n\nPlease retain this documentation for future reference.\n\nRegards,\nIT Support",
+    "htmlBody": "<div><p>Hi John,</p><p>The system migration project has been completed and all related documentation has been archived. The old system has been successfully decommissioned and the new system is fully operational.</p><p>Please retain this documentation for future reference.</p><p>Regards,<br/>IT Support</p></div>",
+    "snippet": "The system migration project has been completed and all related documentation has been archived. The old system...",
+    "date": "2023-11-10T09:15:00Z",
+    "receivedDate": "2023-11-10T09:16:00Z",
+    "status": "archived",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["migration", "completed"],
+    "priority": "normal",
+    "folder": "archive",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2023-11-10T09:16:00Z",
+    "updatedAt": "2023-11-10T09:16:00Z"
+  },
+  {
+    "id": "archive-10",
+    "messageId": "<msg-archive-010@company.com>",
+    "threadId": "thread-archive-010",
+    "subject": "Completed Training Session - Team Building",
+    "from": {
+      "email": "events@company.com",
+      "name": "Events Team"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [
+      {
+        "email": "hr@company.com",
+        "name": "HR Department"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "team-building-photos.zip",
+        "contentType": "application/zip",
+        "size": 5120,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nThe team building event has been completed and all materials have been archived. The event was a great success and helped strengthen team relationships.\n\nPhotos and documentation from the event are attached for your records.\n\nBest regards,\nEvents Team",
+    "htmlBody": "<div><p>Hi John,</p><p>The team building event has been completed and all materials have been archived. The event was a great success and helped strengthen team relationships.</p><p>Photos and documentation from the event are attached for your records.</p><p>Best regards,<br/>Events Team</p></div>",
+    "snippet": "The team building event has been completed and all materials have been archived. The event was a great success...",
+    "date": "2023-11-05T16:30:00Z",
+    "receivedDate": "2023-11-05T16:31:00Z",
+    "status": "archived",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["team-building", "completed"],
+    "priority": "normal",
+    "folder": "archive",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2023-11-05T16:31:00Z",
+    "updatedAt": "2023-11-05T16:31:00Z"
+  }
+] 

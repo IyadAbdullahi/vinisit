@@ -1,0 +1,511 @@
+[
+  {
+    "id": "sent-1",
+    "messageId": "<msg-sent-001@company.com>",
+    "threadId": "thread-sent-001",
+    "subject": "Weekly Team Status Report",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "team@company.com",
+        "name": "Development Team"
+      }
+    ],
+    "cc": [
+      {
+        "email": "manager@company.com",
+        "name": "Manager"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "weekly-report.docx",
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 2048,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Team,\n\nHere's our weekly status report:\n\nCompleted this week:\n- Fixed critical bugs in the main application\n- Completed user interface improvements\n- Conducted code reviews\n\nNext week's priorities:\n- Implement new feature requests\n- Performance optimization\n- Documentation updates\n\nGreat work everyone!\n\nJohn",
+    "htmlBody": "<div><p>Team,</p><p>Here's our weekly status report:</p><h3>Completed this week:</h3><ul><li>Fixed critical bugs in the main application</li><li>Completed user interface improvements</li><li>Conducted code reviews</li></ul><h3>Next week's priorities:</h3><ul><li>Implement new feature requests</li><li>Performance optimization</li><li>Documentation updates</li></ul><p>Great work everyone!</p><p>John</p></div>",
+    "snippet": "Here's our weekly status report: Completed this week: Fixed critical bugs in the main application...",
+    "date": "2024-01-12T16:45:00Z",
+    "receivedDate": "2024-01-12T16:45:00Z",
+    "status": "sent",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["weekly-report", "team"],
+    "priority": "normal",
+    "folder": "sent",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-12T16:45:00Z",
+    "updatedAt": "2024-01-12T16:45:00Z"
+  },
+  {
+    "id": "sent-2",
+    "messageId": "<msg-sent-002@company.com>",
+    "threadId": "thread-sent-002",
+    "subject": "Client Meeting Follow-up",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "client@example.com",
+        "name": "Client"
+      }
+    ],
+    "cc": [
+      {
+        "email": "jane.smith@example.com",
+        "name": "Jane Smith"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "meeting-notes.pdf",
+        "contentType": "application/pdf",
+        "size": 1536,
+        "disposition": "attachment"
+      },
+      {
+        "filename": "proposal-draft.docx",
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 2560,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Dear Client,\n\nThank you for the productive meeting yesterday. As discussed, I've attached the meeting notes and a draft proposal for your review.\n\nKey points from our discussion:\n- Project scope and timeline\n- Budget considerations\n- Technical requirements\n\nPlease review the documents and let me know if you need any modifications.\n\nLooking forward to your feedback.\n\nBest regards,\nJohn",
+    "htmlBody": "<div><p>Dear Client,</p><p>Thank you for the productive meeting yesterday. As discussed, I've attached the meeting notes and a draft proposal for your review.</p><h3>Key points from our discussion:</h3><ul><li>Project scope and timeline</li><li>Budget considerations</li><li>Technical requirements</li></ul><p>Please review the documents and let me know if you need any modifications.</p><p>Looking forward to your feedback.</p><p>Best regards,<br/>John</p></div>",
+    "snippet": "Thank you for the productive meeting yesterday. As discussed, I've attached the meeting notes...",
+    "date": "2024-01-11T11:20:00Z",
+    "receivedDate": "2024-01-11T11:20:00Z",
+    "status": "sent",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["client", "meeting"],
+    "priority": "normal",
+    "folder": "sent",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-11T11:20:00Z",
+    "updatedAt": "2024-01-11T11:20:00Z"
+  },
+  {
+    "id": "sent-3",
+    "messageId": "<msg-sent-003@company.com>",
+    "threadId": "thread-sent-003",
+    "subject": "Project Proposal - New Feature Development",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "product-manager@company.com",
+        "name": "Product Manager"
+      }
+    ],
+    "cc": [
+      {
+        "email": "tech-lead@company.com",
+        "name": "Tech Lead"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "feature-proposal.pdf",
+        "contentType": "application/pdf",
+        "size": 4096,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi Product Manager,\n\nI've completed the proposal for the new feature development project. The proposal includes detailed technical specifications, timeline estimates, and resource requirements.\n\nKey highlights:\n- Advanced search functionality\n- Real-time notifications\n- Enhanced reporting tools\n- Estimated timeline: 3 months\n- Team size: 4 developers\n\nPlease review the attached proposal and let me know your thoughts.\n\nBest regards,\nJohn",
+    "htmlBody": "<div><p>Hi Product Manager,</p><p>I've completed the proposal for the new feature development project. The proposal includes detailed technical specifications, timeline estimates, and resource requirements.</p><h3>Key highlights:</h3><ul><li>Advanced search functionality</li><li>Real-time notifications</li><li>Enhanced reporting tools</li><li>Estimated timeline: 3 months</li><li>Team size: 4 developers</li></ul><p>Please review the attached proposal and let me know your thoughts.</p><p>Best regards,<br/>John</p></div>",
+    "snippet": "I've completed the proposal for the new feature development project. The proposal includes detailed technical specifications...",
+    "date": "2024-01-10T14:30:00Z",
+    "receivedDate": "2024-01-10T14:30:00Z",
+    "status": "sent",
+    "isStarred": true,
+    "isImportant": true,
+    "labels": ["proposal", "feature"],
+    "priority": "high",
+    "folder": "sent",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-10T14:30:00Z",
+    "updatedAt": "2024-01-10T14:30:00Z"
+  },
+  {
+    "id": "sent-4",
+    "messageId": "<msg-sent-004@company.com>",
+    "threadId": "thread-sent-004",
+    "subject": "Team Meeting Agenda - Tomorrow",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "team@company.com",
+        "name": "Development Team"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "meeting-agenda.docx",
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi Team,\n\nJust a reminder about tomorrow's team meeting at 10 AM. Here's the agenda:\n\n1. Project status updates\n2. Code review discussion\n3. Sprint planning\n4. Open discussion\n\nPlease review the attached agenda and come prepared with any questions or updates.\n\nSee you tomorrow!\n\nJohn",
+    "htmlBody": "<div><p>Hi Team,</p><p>Just a reminder about tomorrow's team meeting at <strong>10 AM</strong>. Here's the agenda:</p><ol><li>Project status updates</li><li>Code review discussion</li><li>Sprint planning</li><li>Open discussion</li></ol><p>Please review the attached agenda and come prepared with any questions or updates.</p><p>See you tomorrow!</p><p>John</p></div>",
+    "snippet": "Just a reminder about tomorrow's team meeting at 10 AM. Here's the agenda: 1. Project status updates...",
+    "date": "2024-01-09T15:20:00Z",
+    "receivedDate": "2024-01-09T15:20:00Z",
+    "status": "sent",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["meeting", "agenda"],
+    "priority": "normal",
+    "folder": "sent",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-09T15:20:00Z",
+    "updatedAt": "2024-01-09T15:20:00Z"
+  },
+  {
+    "id": "sent-5",
+    "messageId": "<msg-sent-005@company.com>",
+    "threadId": "thread-sent-005",
+    "subject": "Bug Report - Critical Issue Found",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "qa-team@company.com",
+        "name": "QA Team"
+      }
+    ],
+    "cc": [
+      {
+        "email": "tech-lead@company.com",
+        "name": "Tech Lead"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "bug-report.pdf",
+        "contentType": "application/pdf",
+        "size": 2048,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi QA Team,\n\nI've identified a critical bug in the user authentication system. The issue affects user login functionality and could potentially expose security vulnerabilities.\n\nBug Details:\n- Severity: Critical\n- Component: Authentication Module\n- Impact: User login failures\n- Steps to reproduce included in report\n\nPlease review the attached bug report and prioritize this for immediate attention.\n\nThanks,\nJohn",
+    "htmlBody": "<div><p>Hi QA Team,</p><p>I've identified a <span style=\"color: red; font-weight: bold;\">critical bug</span> in the user authentication system. The issue affects user login functionality and could potentially expose security vulnerabilities.</p><h3>Bug Details:</h3><ul><li>Severity: Critical</li><li>Component: Authentication Module</li><li>Impact: User login failures</li><li>Steps to reproduce included in report</li></ul><p>Please review the attached bug report and prioritize this for immediate attention.</p><p>Thanks,<br/>John</p></div>",
+    "snippet": "I've identified a critical bug in the user authentication system. The issue affects user login functionality...",
+    "date": "2024-01-08T12:45:00Z",
+    "receivedDate": "2024-01-08T12:45:00Z",
+    "status": "sent",
+    "isStarred": false,
+    "isImportant": true,
+    "labels": ["bug", "critical"],
+    "priority": "high",
+    "folder": "sent",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-08T12:45:00Z",
+    "updatedAt": "2024-01-08T12:45:00Z"
+  },
+  {
+    "id": "sent-6",
+    "messageId": "<msg-sent-006@company.com>",
+    "threadId": "thread-sent-006",
+    "subject": "Thank You - Project Completion",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "team@company.com",
+        "name": "Development Team"
+      }
+    ],
+    "cc": [
+      {
+        "email": "manager@company.com",
+        "name": "Manager"
+      }
+    ],
+    "bcc": [],
+    "attachments": [],
+    "hasAttachments": false,
+    "textBody": "Dear Team,\n\nI want to express my sincere gratitude to everyone who contributed to the successful completion of our latest project. Your dedication, hard work, and collaboration made this achievement possible.\n\nSpecial thanks to:\n- Jane for her excellent project management\n- Mike for the outstanding technical implementation\n- Sarah for the beautiful UI design\n- Everyone else for their valuable contributions\n\nThis project has been a great success, and I'm proud to work with such a talented team.\n\nBest regards,\nJohn",
+    "htmlBody": "<div><p>Dear Team,</p><p>I want to express my sincere gratitude to everyone who contributed to the successful completion of our latest project. Your dedication, hard work, and collaboration made this achievement possible.</p><h3>Special thanks to:</h3><ul><li>Jane for her excellent project management</li><li>Mike for the outstanding technical implementation</li><li>Sarah for the beautiful UI design</li><li>Everyone else for their valuable contributions</li></ul><p>This project has been a great success, and I'm proud to work with such a talented team.</p><p>Best regards,<br/>John</p></div>",
+    "snippet": "I want to express my sincere gratitude to everyone who contributed to the successful completion of our latest project...",
+    "date": "2024-01-07T16:30:00Z",
+    "receivedDate": "2024-01-07T16:30:00Z",
+    "status": "sent",
+    "isStarred": true,
+    "isImportant": false,
+    "labels": ["thank-you", "project"],
+    "priority": "normal",
+    "folder": "sent",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-07T16:30:00Z",
+    "updatedAt": "2024-01-07T16:30:00Z"
+  },
+  {
+    "id": "sent-7",
+    "messageId": "<msg-sent-007@company.com>",
+    "threadId": "thread-sent-007",
+    "subject": "Code Review Request - Feature Branch",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "senior-dev@company.com",
+        "name": "Senior Developer"
+      }
+    ],
+    "cc": [
+      {
+        "email": "tech-lead@company.com",
+        "name": "Tech Lead"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "code-review-notes.docx",
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi Senior Developer,\n\nI've completed the implementation of the new user authentication feature and would appreciate your code review. The feature includes:\n\n- Multi-factor authentication\n- Password strength validation\n- Session management improvements\n\nPlease review the code and provide feedback on:\n- Code quality and best practices\n- Security considerations\n- Performance implications\n\nThanks in advance for your time.\n\nBest regards,\nJohn",
+    "htmlBody": "<div><p>Hi Senior Developer,</p><p>I've completed the implementation of the new user authentication feature and would appreciate your code review. The feature includes:</p><ul><li>Multi-factor authentication</li><li>Password strength validation</li><li>Session management improvements</li></ul><p>Please review the code and provide feedback on:</p><ul><li>Code quality and best practices</li><li>Security considerations</li><li>Performance implications</li></ul><p>Thanks in advance for your time.</p><p>Best regards,<br/>John</p></div>",
+    "snippet": "I've completed the implementation of the new user authentication feature and would appreciate your code review...",
+    "date": "2024-01-06T13:15:00Z",
+    "receivedDate": "2024-01-06T13:15:00Z",
+    "status": "sent",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["code-review", "feature"],
+    "priority": "normal",
+    "folder": "sent",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-06T13:15:00Z",
+    "updatedAt": "2024-01-06T13:15:00Z"
+  },
+  {
+    "id": "sent-8",
+    "messageId": "<msg-sent-008@company.com>",
+    "threadId": "thread-sent-008",
+    "subject": "Documentation Update - API Reference",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "documentation@company.com",
+        "name": "Documentation Team"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "api-reference-update.pdf",
+        "contentType": "application/pdf",
+        "size": 3072,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi Documentation Team,\n\nI've updated the API reference documentation to include the new endpoints and changes from our recent release. The updated documentation covers:\n\n- New authentication endpoints\n- Updated response formats\n- Error handling improvements\n- Code examples for all endpoints\n\nPlease review the attached document and update the official documentation accordingly.\n\nThanks,\nJohn",
+    "htmlBody": "<div><p>Hi Documentation Team,</p><p>I've updated the API reference documentation to include the new endpoints and changes from our recent release. The updated documentation covers:</p><ul><li>New authentication endpoints</li><li>Updated response formats</li><li>Error handling improvements</li><li>Code examples for all endpoints</li></ul><p>Please review the attached document and update the official documentation accordingly.</p><p>Thanks,<br/>John</p></div>",
+    "snippet": "I've updated the API reference documentation to include the new endpoints and changes from our recent release...",
+    "date": "2024-01-05T10:45:00Z",
+    "receivedDate": "2024-01-05T10:45:00Z",
+    "status": "sent",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["documentation", "api"],
+    "priority": "normal",
+    "folder": "sent",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-05T10:45:00Z",
+    "updatedAt": "2024-01-05T10:45:00Z"
+  },
+  {
+    "id": "sent-9",
+    "messageId": "<msg-sent-009@company.com>",
+    "threadId": "thread-sent-009",
+    "subject": "Training Session - New Tools Introduction",
+    "from": {
+      "email": "john.doe@example.com",
+        "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "team@company.com",
+        "name": "Development Team"
+      }
+    ],
+    "cc": [
+      {
+        "email": "hr@company.com",
+        "name": "HR Department"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "training-materials.zip",
+        "contentType": "application/zip",
+        "size": 5120,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi Team,\n\nI'll be conducting a training session next week to introduce the new development tools we've recently adopted. The session will cover:\n\n- New IDE features and shortcuts\n- Code quality tools and best practices\n- Testing frameworks and methodologies\n- Performance monitoring tools\n\nPlease review the attached training materials before the session. The training will be held on Wednesday from 2-4 PM.\n\nLooking forward to seeing everyone there!\n\nBest regards,\nJohn",
+    "htmlBody": "<div><p>Hi Team,</p><p>I'll be conducting a training session next week to introduce the new development tools we've recently adopted. The session will cover:</p><ul><li>New IDE features and shortcuts</li><li>Code quality tools and best practices</li><li>Testing frameworks and methodologies</li><li>Performance monitoring tools</li></ul><p>Please review the attached training materials before the session. The training will be held on <strong>Wednesday from 2-4 PM</strong>.</p><p>Looking forward to seeing everyone there!</p><p>Best regards,<br/>John</p></div>",
+    "snippet": "I'll be conducting a training session next week to introduce the new development tools we've recently adopted...",
+    "date": "2024-01-04T14:20:00Z",
+    "receivedDate": "2024-01-04T14:20:00Z",
+    "status": "sent",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["training", "tools"],
+    "priority": "normal",
+    "folder": "sent",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-04T14:20:00Z",
+    "updatedAt": "2024-01-04T14:20:00Z"
+  },
+  {
+    "id": "sent-10",
+    "messageId": "<msg-sent-010@company.com>",
+    "threadId": "thread-sent-010",
+    "subject": "Project Timeline Update - Q1 2024",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "stakeholders@company.com",
+        "name": "Project Stakeholders"
+      }
+    ],
+    "cc": [
+      {
+        "email": "project-manager@company.com",
+        "name": "Project Manager"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "timeline-update.xlsx",
+        "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "size": 2048,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Dear Stakeholders,\n\nI'm pleased to provide an update on our Q1 2024 project timeline. We've made significant progress and are on track to meet our objectives.\n\nKey updates:\n- Phase 1 completed ahead of schedule\n- Phase 2 is 75% complete\n- Phase 3 planning is finalized\n- Resource allocation optimized\n\nPlease review the attached timeline document for detailed information.\n\nBest regards,\nJohn",
+    "htmlBody": "<div><p>Dear Stakeholders,</p><p>I'm pleased to provide an update on our <strong>Q1 2024 project timeline</strong>. We've made significant progress and are on track to meet our objectives.</p><h3>Key updates:</h3><ul><li>Phase 1 completed ahead of schedule</li><li>Phase 2 is 75% complete</li><li>Phase 3 planning is finalized</li><li>Resource allocation optimized</li></ul><p>Please review the attached timeline document for detailed information.</p><p>Best regards,<br/>John</p></div>",
+    "snippet": "I'm pleased to provide an update on our Q1 2024 project timeline. We've made significant progress and are on track...",
+    "date": "2024-01-03T11:30:00Z",
+    "receivedDate": "2024-01-03T11:30:00Z",
+    "status": "sent",
+    "isStarred": true,
+    "isImportant": true,
+    "labels": ["timeline", "update"],
+    "priority": "high",
+    "folder": "sent",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-03T11:30:00Z",
+    "updatedAt": "2024-01-03T11:30:00Z"
+  }
+] 

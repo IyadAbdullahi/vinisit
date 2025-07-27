@@ -1,0 +1,489 @@
+[
+  {
+    "id": "inbox-1",
+    "messageId": "<msg-inbox-001@company.com>",
+    "threadId": "thread-inbox-001",
+    "subject": "Meeting Reminder - Project Kickoff",
+    "from": {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    },
+    "to": [
+      {
+        "email": "jane.smith@example.com",
+        "name": "Jane Smith"
+      },
+      {
+        "email": "mike.wilson@example.com",
+        "name": "Mike Wilson"
+      }
+    ],
+    "cc": [
+      {
+        "email": "hr@company.com",
+        "name": "HR Department"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "project-brief.pdf",
+        "contentType": "application/pdf",
+        "size": 2048,
+        "disposition": "attachment"
+      },
+      {
+        "filename": "meeting-agenda.docx",
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi team,\n\nDon't forget about the project kickoff meeting tomorrow at 3 PM. We need to discuss the project timeline, resource allocation, and key milestones.\n\nPlease review the attached project brief and meeting agenda before the meeting.\n\nLooking forward to seeing everyone there!\n\nBest regards,\nJohn",
+    "htmlBody": "<div><p>Hi team,</p><p>Don't forget about the <strong>project kickoff meeting</strong> tomorrow at <em>3 PM</em>. We need to discuss:</p><ul><li>Project timeline</li><li>Resource allocation</li><li>Key milestones</li></ul><p>Please review the attached project brief and meeting agenda before the meeting.</p><p>Looking forward to seeing everyone there!</p><p>Best regards,<br/>John</p></div>",
+    "snippet": "Don't forget about the project kickoff meeting tomorrow at 3 PM. We need to discuss the project timeline...",
+    "date": "2024-01-15T10:00:00Z",
+    "receivedDate": "2024-01-15T10:01:00Z",
+    "status": "unread",
+    "isStarred": true,
+    "isImportant": true,
+    "labels": ["meeting", "project"],
+    "priority": "high",
+    "folder": "inbox",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-15T10:01:00Z",
+    "updatedAt": "2024-01-15T10:01:00Z"
+  },
+  {
+    "id": "inbox-2",
+    "messageId": "<msg-inbox-002@company.com>",
+    "threadId": "thread-inbox-002",
+    "subject": "Project Update - Phase 1 Complete",
+    "from": {
+      "email": "jane.smith@example.com",
+      "name": "Jane Smith"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [
+      {
+        "email": "project-manager@company.com",
+        "name": "Project Manager"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "phase1-report.pdf",
+        "contentType": "application/pdf",
+        "size": 3072,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nThe project is on schedule and we have successfully completed Phase 1. All deliverables have been met and the client is satisfied with the progress.\n\nKey achievements:\n- Completed all design requirements\n- Implemented core functionality\n- Conducted initial testing\n\nWe are on track to complete the entire project by the end of the quarter.\n\nBest regards,\nJane",
+    "htmlBody": "<div><p>Hi John,</p><p>The project is <span style=\"color: green; font-weight: bold;\">on schedule</span> and we have successfully completed <strong>Phase 1</strong>. All deliverables have been met and the client is satisfied with the progress.</p><h3>Key achievements:</h3><ul><li>Completed all design requirements</li><li>Implemented core functionality</li><li>Conducted initial testing</li></ul><p>We are on track to complete the entire project by the end of the quarter.</p><p>Best regards,<br/><em>Jane</em></p></div>",
+    "snippet": "The project is on schedule and we have successfully completed Phase 1. All deliverables have been met...",
+    "date": "2024-01-14T14:30:00Z",
+    "receivedDate": "2024-01-14T14:31:00Z",
+    "status": "read",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["project", "update"],
+    "priority": "normal",
+    "folder": "inbox",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-14T14:31:00Z",
+    "updatedAt": "2024-01-14T14:31:00Z"
+  },
+  {
+    "id": "inbox-3",
+    "messageId": "<msg-inbox-003@company.com>",
+    "threadId": "thread-inbox-003",
+    "subject": "Budget Approval Request",
+    "from": {
+      "email": "finance@company.com",
+      "name": "Finance Team"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [
+      {
+        "email": "ceo@company.com",
+        "name": "CEO"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "budget-proposal.xlsx",
+        "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "size": 4096,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Dear John,\n\nPlease review the attached budget proposal for Q1 2024. We need your approval to proceed with the new equipment purchases and team expansion.\n\nThe total budget request is $150,000, which includes:\n- New development tools: $25,000\n- Team training: $15,000\n- Equipment upgrades: $110,000\n\nPlease let us know if you have any questions or need additional information.\n\nRegards,\nFinance Team",
+    "snippet": "Please review the attached budget proposal for Q1 2024. We need your approval to proceed...",
+    "date": "2024-01-13T09:15:00Z",
+    "receivedDate": "2024-01-13T09:16:00Z",
+    "status": "unread",
+    "isStarred": false,
+    "isImportant": true,
+    "labels": ["budget", "approval"],
+    "priority": "high",
+    "folder": "inbox",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-13T09:16:00Z",
+    "updatedAt": "2024-01-13T09:16:00Z"
+  },
+  {
+    "id": "inbox-4",
+    "messageId": "<msg-inbox-004@company.com>",
+    "threadId": "thread-inbox-004",
+    "subject": "System Maintenance Notice",
+    "from": {
+      "email": "it-support@company.com",
+      "name": "IT Support"
+    },
+    "to": [
+      {
+        "email": "all-employees@company.com",
+        "name": "All Employees"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "replyTo": {
+      "email": "support@company.com",
+      "name": "Support"
+    },
+    "attachments": [],
+    "hasAttachments": false,
+    "textBody": "Dear All,\n\nWe will be performing scheduled system maintenance on Saturday, January 20th, from 2:00 AM to 6:00 AM EST.\n\nDuring this time, the following services may be temporarily unavailable:\n- Email system\n- File sharing\n- Internal applications\n\nWe apologize for any inconvenience this may cause. Please plan accordingly.\n\nIf you have any urgent matters that require immediate attention, please contact the IT support team.\n\nThank you for your understanding.\n\nIT Support Team",
+    "snippet": "We will be performing scheduled system maintenance on Saturday, January 20th, from 2:00 AM to 6:00 AM EST...",
+    "date": "2024-01-09T08:00:00Z",
+    "receivedDate": "2024-01-09T08:01:00Z",
+    "status": "read",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["maintenance", "notice"],
+    "priority": "normal",
+    "folder": "inbox",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-09T08:01:00Z",
+    "updatedAt": "2024-01-09T08:01:00Z"
+  },
+  {
+    "id": "inbox-5",
+    "messageId": "<msg-inbox-005@company.com>",
+    "threadId": "thread-inbox-005",
+    "subject": "Holiday Schedule Update",
+    "from": {
+      "email": "hr@company.com",
+      "name": "HR Team"
+    },
+    "to": [
+      {
+        "email": "all-employees@company.com",
+        "name": "All Employees"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "holiday-calendar-2024.pdf",
+        "contentType": "application/pdf",
+        "size": 512,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hello Everyone,\n\nPlease find attached the updated holiday calendar for 2024. We've added a few additional company holidays and updated some dates based on feedback.\n\nKey changes:\n- Added Juneteenth as a company holiday\n- Moved some floating holidays\n- Updated office closure dates\n\nPlease review the calendar and update your personal schedules accordingly.\n\nIf you have any questions, please contact HR.\n\nBest regards,\nHR Team",
+    "snippet": "Please find attached the updated holiday calendar for 2024. We've added a few additional company holidays...",
+    "date": "2024-01-08T10:30:00Z",
+    "receivedDate": "2024-01-08T10:31:00Z",
+    "status": "read",
+    "isStarred": true,
+    "isImportant": false,
+    "labels": ["holiday", "schedule"],
+    "priority": "normal",
+    "folder": "inbox",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-08T10:31:00Z",
+    "updatedAt": "2024-01-08T10:31:00Z"
+  },
+  {
+    "id": "inbox-6",
+    "messageId": "<msg-inbox-006@company.com>",
+    "threadId": "thread-inbox-006",
+    "subject": "Client Feedback - Project Alpha",
+    "from": {
+      "email": "client@example.com",
+      "name": "Client Feedback"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [
+      {
+        "email": "jane.smith@example.com",
+        "name": "Jane Smith"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "feedback-report.pdf",
+        "contentType": "application/pdf",
+        "size": 1536,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nThank you for the excellent work on Project Alpha. The team has been very responsive and the deliverables have exceeded our expectations.\n\nWe particularly appreciate:\n- The attention to detail in the design\n- The timely delivery of milestones\n- The clear communication throughout\n\nWe look forward to working with you on future projects.\n\nBest regards,\nClient Team",
+    "snippet": "Thank you for the excellent work on Project Alpha. The team has been very responsive and the deliverables...",
+    "date": "2024-01-07T15:45:00Z",
+    "receivedDate": "2024-01-07T15:46:00Z",
+    "status": "unread",
+    "isStarred": false,
+    "isImportant": true,
+    "labels": ["client", "feedback"],
+    "priority": "high",
+    "folder": "inbox",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-07T15:46:00Z",
+    "updatedAt": "2024-01-07T15:46:00Z"
+  },
+  {
+    "id": "inbox-7",
+    "messageId": "<msg-inbox-007@company.com>",
+    "threadId": "thread-inbox-007",
+    "subject": "Team Building Event - Next Week",
+    "from": {
+      "email": "events@company.com",
+      "name": "Events Team"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "team-building-details.pdf",
+        "contentType": "application/pdf",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hi John,\n\nWe're excited to announce our quarterly team building event next week! This will be a great opportunity to connect with colleagues and have some fun.\n\nEvent Details:\n- Date: Friday, January 19th\n- Time: 2:00 PM - 6:00 PM\n- Location: Central Park\n- Activities: Team games, networking, refreshments\n\nPlease RSVP by Wednesday if you plan to attend.\n\nLooking forward to seeing you there!\n\nBest regards,\nEvents Team",
+    "snippet": "We're excited to announce our quarterly team building event next week! This will be a great opportunity...",
+    "date": "2024-01-06T11:20:00Z",
+    "receivedDate": "2024-01-06T11:21:00Z",
+    "status": "read",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["team-building", "event"],
+    "priority": "normal",
+    "folder": "inbox",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-06T11:21:00Z",
+    "updatedAt": "2024-01-06T11:21:00Z"
+  },
+  {
+    "id": "inbox-8",
+    "messageId": "<msg-inbox-008@company.com>",
+    "threadId": "thread-inbox-008",
+    "subject": "Security Alert - Password Update Required",
+    "from": {
+      "email": "security@company.com",
+      "name": "Security Team"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [],
+    "hasAttachments": false,
+    "textBody": "Dear John,\n\nThis is a security alert regarding your account. We have detected some unusual activity and recommend updating your password as a precautionary measure.\n\nPlease update your password within the next 24 hours by visiting the company portal.\n\nIf you have any questions or concerns, please contact the IT security team immediately.\n\nThank you for your attention to this matter.\n\nSecurity Team",
+    "snippet": "This is a security alert regarding your account. We have detected some unusual activity and recommend...",
+    "date": "2024-01-05T14:30:00Z",
+    "receivedDate": "2024-01-05T14:31:00Z",
+    "status": "unread",
+    "isStarred": false,
+    "isImportant": true,
+    "labels": ["security", "alert"],
+    "priority": "high",
+    "folder": "inbox",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-05T14:31:00Z",
+    "updatedAt": "2024-01-05T14:31:00Z"
+  },
+  {
+    "id": "inbox-9",
+    "messageId": "<msg-inbox-009@company.com>",
+    "threadId": "thread-inbox-009",
+    "subject": "Monthly Newsletter - January 2024",
+    "from": {
+      "email": "newsletter@company.com",
+      "name": "Company Newsletter"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "january-newsletter.pdf",
+        "contentType": "application/pdf",
+        "size": 2048,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Hello John,\n\nWelcome to our January 2024 newsletter! Here's what's happening this month:\n\nCompany Updates:\n- New office expansion plans\n- Employee recognition program\n- Technology upgrades\n\nIndustry News:\n- Latest trends in our sector\n- Market analysis\n- Competitor insights\n\nEmployee Spotlight:\n- Meet our new team members\n- Success stories\n- Upcoming events\n\nWe hope you enjoy this month's newsletter!\n\nBest regards,\nNewsletter Team",
+    "snippet": "Welcome to our January 2024 newsletter! Here's what's happening this month: Company Updates...",
+    "date": "2024-01-04T09:00:00Z",
+    "receivedDate": "2024-01-04T09:01:00Z",
+    "status": "read",
+    "isStarred": false,
+    "isImportant": false,
+    "labels": ["newsletter", "monthly"],
+    "priority": "normal",
+    "folder": "inbox",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-04T09:01:00Z",
+    "updatedAt": "2024-01-04T09:01:00Z"
+  },
+  {
+    "id": "inbox-10",
+    "messageId": "<msg-inbox-010@company.com>",
+    "threadId": "thread-inbox-010",
+    "subject": "Performance Review Reminder",
+    "from": {
+      "email": "hr@company.com",
+      "name": "HR Department"
+    },
+    "to": [
+      {
+        "email": "john.doe@example.com",
+        "name": "John Doe"
+      }
+    ],
+    "cc": [
+      {
+        "email": "manager@company.com",
+        "name": "Manager"
+      }
+    ],
+    "bcc": [],
+    "attachments": [
+      {
+        "filename": "performance-review-template.docx",
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 1024,
+        "disposition": "attachment"
+      }
+    ],
+    "hasAttachments": true,
+    "textBody": "Dear John,\n\nThis is a reminder that your annual performance review is scheduled for next week. Please prepare by:\n\n- Reviewing your goals from last year\n- Gathering examples of your achievements\n- Completing the self-assessment form\n- Scheduling a meeting with your manager\n\nThe attached template will help you prepare for the review.\n\nIf you have any questions, please contact HR.\n\nBest regards,\nHR Department",
+    "snippet": "This is a reminder that your annual performance review is scheduled for next week. Please prepare by...",
+    "date": "2024-01-03T16:45:00Z",
+    "receivedDate": "2024-01-03T16:46:00Z",
+    "status": "unread",
+    "isStarred": false,
+    "isImportant": true,
+    "labels": ["performance", "review"],
+    "priority": "high",
+    "folder": "inbox",
+    "userId": "user-001",
+    "accountId": "account-001",
+    "isDraft": false,
+    "isEncrypted": false,
+    "processingStatus": "processed",
+    "syncStatus": "synced",
+    "isDeleted": false,
+    "createdAt": "2024-01-03T16:46:00Z",
+    "updatedAt": "2024-01-03T16:46:00Z"
+  }
+] 
