@@ -138,15 +138,37 @@ export interface Client {
   email: string;
   phone: string;
   address: string;
+  industry?: string;
+  status?: 'active' | 'inactive' | 'prospect';
+  type?: 'client' | 'lead';
+  source?: 'referral' | 'website' | 'cold_call' | 'marketing' | 'other';
+  priority?: 'low' | 'medium' | 'high';
+  assignedTo?: string;
+  createdAt?: string;
+  lastContact?: string;
+  nextFollowUp?: string;
+  notes?: string;
+  revenue?: number;
+  projectCount?: number;
+  conversionDate?: string;
+  tags?: string[];
 }
 
 export interface Revenue {
   id: string;
   projectId?: string;
+  projectName?: string;
   clientId?: string;
+  clientName?: string;
   amount: number;
   date: string;
   description?: string;
+  category?: 'project_completion' | 'milestone_payment' | 'retainer' | 'consulting' | 'other';
+  status?: 'pending' | 'received' | 'overdue';
+  invoiceNumber?: string;
+  paymentMethod?: 'bank_transfer' | 'check' | 'cash' | 'credit_card';
+  receivedDate?: string;
+  notes?: string;
 }
 
 export interface Item {

@@ -169,7 +169,7 @@ export const navigationConfig: NavigationItem[] = [
   {
     id: 'managing-director-performance',
     label: 'Performance Overview',
-    icon: 'TrendingUp',
+    icon: 'BarChart3',
     href: '/managing-director/performance',
     roles: ['managing_director'],
   },
@@ -178,6 +178,27 @@ export const navigationConfig: NavigationItem[] = [
     label: 'Financial Insights',
     icon: 'DollarSign',
     href: '/managing-director/financials',
+    roles: ['managing_director'],
+  },
+  {
+    id: 'managing-director-clients',
+    label: 'Client & Leads',
+    icon: 'Users',
+    href: '/managing-director/clients',
+    roles: ['managing_director'],
+  },
+  {
+    id: 'managing-director-revenue',
+    label: 'Revenue Management',
+    icon: 'TrendingUp',
+    href: '/managing-director/revenue',
+    roles: ['managing_director'],
+  },
+  {
+    id: 'managing-director-analytics',
+    label: 'Advanced Analytics',
+    icon: 'BarChart3',
+    href: '/managing-director/analytics',
     roles: ['managing_director'],
   },
   {

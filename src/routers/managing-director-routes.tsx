@@ -5,6 +5,9 @@ import type { RouteObject } from 'react-router-dom';
 const ManagingDirectorDashboard = React.lazy(() => import('@/pages/managing-director/dashboard'));
 const PerformanceOverview = React.lazy(() => import('@/pages/managing-director/performance'));
 const FinancialInsights = React.lazy(() => import('@/pages/managing-director/financials'));
+const ClientsAndLeads = React.lazy(() => import('@/pages/managing-director/clients'));
+const RevenueManagement = React.lazy(() => import('@/pages/managing-director/revenue'));
+const AdvancedAnalytics = React.lazy(() => import('@/pages/managing-director/analytics'));
 const ApprovalsAndDecisions = React.lazy(() => import('@/pages/managing-director/approvals'));
 const HistoryPage = React.lazy(() => import('@/pages/managing-director/history'));
 const ProjectDetails = React.lazy(() => import('@/pages/managing-director/project-details'));
@@ -29,6 +32,18 @@ export const managingDirectorRoutes: RouteObject[] = [
       {
         path: 'financials',
         element: <FinancialInsights />,
+      },
+      {
+        path: 'clients',
+        element: <ClientsAndLeads />,
+      },
+      {
+        path: 'revenue',
+        element: <RevenueManagement />,
+      },
+      {
+        path: 'analytics',
+        element: <AdvancedAnalytics />,
       },
       {
         path: 'approvals',

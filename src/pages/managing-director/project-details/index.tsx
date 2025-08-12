@@ -12,6 +12,16 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import {
+  ArrowLeft,
+  CheckCircle,
+  XCircle,
+  Clock,
+  DollarSign,
+  Users,
+  Calendar,
+  AlertTriangle
+} from 'lucide-react';
 import { mockProjects } from '../../super-admin/mockdata';
 import { mockDepartments, mockEmployees } from '../../super-admin/mockdata';
 
@@ -26,7 +36,10 @@ const ProjectDetailsPage = () => {
     return (
       <div className="p-6">
         <h1 className="text-2xl font-bold mb-4">Project Not Found</h1>
-        <Button onClick={() => navigate(-1)}>Go Back</Button>
+        <Button onClick={() => navigate(-1)}>
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Go Back
+        </Button>
       </div>
     );
   }
@@ -35,6 +48,11 @@ const ProjectDetailsPage = () => {
   const department = mockDepartments.find(d => d.id === project.departmentId);
   const manager = mockEmployees.find(e => e.id === project.managerId);
 
+  const handleProjectApproval = (action: 'approve' | 'reject') => {
+    console.log(`${action} project ${project.id}`);
+    // In real app, this would update the project approval status
+    navigate('/managing-director/approvals');
+  };
   return (
     <div className="p-6 space-y-6">
       <div className="flex justify-between items-center">
@@ -42,9 +60,56 @@ const ProjectDetailsPage = () => {
           <h1 className="text-3xl font-bold">{project.name}</h1>
           <p className="text-muted-foreground">Project Code: {project.code}</p>
         </div>
-        <Button onClick={() => navigate(-1)}>Back to Projects</Button>
+        <div className="flex gap-2">
+          <Button variant="outline" onClick={() => navigate(-1)}>
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back
+          </Button>
+          {project.approvalStatus === 'pending' && (
+            <>
+              <Button 
+                variant="outline" 
+                className="text-red-600 hover:text-red-700"
+                onClick={() => handleProjectApproval('reject')}
+              >
+                <XCircle className="h-4 w-4 mr-2" />
+                Reject Project
+              </Button>
+              <Button onClick={() => handleProjectApproval('approve')}>
+                <CheckCircle className="h-4 w-4 mr-2" />
+                Approve Project
+              </Button>
+            </>
+          )}
+        </div>
       </div>
 
+      {/* Project Approval Status */}
+      {project.approvalStatus && (
+        <Card className={
+          project.approvalStatus === 'pending' ? 'border-yellow-200 bg-yellow-50' :
+          project.approvalStatus === 'approved' ? 'border-green-200 bg-green-50' :
+          'border-red-200 bg-red-50'
+        }>
+          <CardContent className="p-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                {project.approvalStatus === 'pending' && <Clock className="h-5 w-5 text-yellow-600" />}
+                {project.approvalStatus === 'approved' && <CheckCircle className="h-5 w-5 text-green-600" />}
+                {project.approvalStatus === 'rejected' && <XCircle className="h-5 w-5 text-red-600" />}
+                <span className="font-medium">
+                  Project Approval Status: {project.approvalStatus.charAt(0).toUpperCase() + project.approvalStatus.slice(1)}
+                </span>
+              </div>
+              {project.approvalStatus === 'pending' && (
+                <Badge variant="outline" className="bg-yellow-100 text-yellow-800">
+                  Requires Your Approval
+                </Badge>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+      )}
       {/* Project Overview */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <Card>
@@ -94,6 +159,12 @@ const ProjectDetailsPage = () => {
                 <span className="text-muted-foreground">Client:</span>
                 <p>{project.clientName || 'N/A'}</p>
               </div>
+              <div>
+                <span className="text-muted-foreground">Timeline:</span>
+                <p className="text-sm">
+                  {new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}
+                </p>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -111,6 +182,12 @@ const ProjectDetailsPage = () => {
               <div>
                 <span className="text-muted-foreground">Spent:</span>
                 <p className="text-xl font-bold">${project.spent.toLocaleString()}</p>
+              </div>
+              <div>
+                <span className="text-muted-foreground">Remaining:</span>
+                <p className="text-xl font-bold text-green-600">
+                  ${(project.budget - project.spent).toLocaleString()}
+                </p>
               </div>
               <div className="space-y-1">
                 <div className="flex justify-between">

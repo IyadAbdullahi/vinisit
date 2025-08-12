@@ -1,5 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
 import {
@@ -11,6 +13,16 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
+import {
+  Users,
+  TrendingUp,
+  DollarSign,
+  Target,
+  Brain,
+  BarChart3,
+  Eye,
+  ArrowRight
+} from 'lucide-react';
 import { 
   mockMDDashboardStats, 
   mockProjectMonitoring,
@@ -20,12 +32,34 @@ import {
 } from '../mockdata';
 
 const DashboardPage = () => {
+  const navigate = useNavigate();
+
+  // Mock client and revenue data for quick stats
+  const clientStats = {
+    totalClients: 15,
+    activeLeads: 8,
+    totalRevenue: 18500000,
+    monthlyGrowth: 12.5
+  };
+
   return (
     <div className="p-6 space-y-6">
-      <h1 className="text-3xl font-bold">Executive Dashboard</h1>
+      <div className="flex justify-between items-center">
+        <h1 className="text-3xl font-bold">Executive Dashboard</h1>
+        <div className="flex gap-2">
+          <Button variant="outline" onClick={() => navigate('/managing-director/analytics')}>
+            <Brain className="h-4 w-4 mr-2" />
+            Advanced Analytics
+          </Button>
+          <Button onClick={() => navigate('/managing-director/approvals')}>
+            <Target className="h-4 w-4 mr-2" />
+            Pending Approvals
+          </Button>
+        </div>
+      </div>
       
       {/* Key Metrics Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium">Total Projects</CardTitle>
@@ -67,6 +101,32 @@ const DashboardPage = () => {
 
         <Card>
           <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium">Total Clients</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{clientStats.totalClients}</div>
+            <div className="text-xs text-muted-foreground">
+              {clientStats.activeLeads} active leads
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-green-600">
+              ${(clientStats.totalRevenue / 1000000).toFixed(1)}M
+            </div>
+            <div className="text-xs text-muted-foreground">
+              +{clientStats.monthlyGrowth}% growth
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium">Pending Approvals</CardTitle>
           </CardHeader>
           <CardContent>
@@ -80,6 +140,76 @@ const DashboardPage = () => {
         </Card>
       </div>
 
+      {/* Quick Access Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <Card className="cursor-pointer hover:shadow-md transition-shadow" onClick={() => navigate('/managing-director/clients')}>
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="flex items-center space-x-2">
+                  <Users className="h-5 w-5 text-blue-600" />
+                  <span className="font-medium">Client Management</span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Manage clients and track leads
+                </p>
+              </div>
+              <ArrowRight className="h-4 w-4 text-muted-foreground" />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="cursor-pointer hover:shadow-md transition-shadow" onClick={() => navigate('/managing-director/revenue')}>
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="flex items-center space-x-2">
+                  <TrendingUp className="h-5 w-5 text-green-600" />
+                  <span className="font-medium">Revenue Tracking</span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Monitor income and revenue streams
+                </p>
+              </div>
+              <ArrowRight className="h-4 w-4 text-muted-foreground" />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="cursor-pointer hover:shadow-md transition-shadow" onClick={() => navigate('/managing-director/analytics')}>
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="flex items-center space-x-2">
+                  <Brain className="h-5 w-5 text-purple-600" />
+                  <span className="font-medium">Predictive Analytics</span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1">
+                  AI-powered insights and forecasts
+                </p>
+              </div>
+              <ArrowRight className="h-4 w-4 text-muted-foreground" />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="cursor-pointer hover:shadow-md transition-shadow" onClick={() => navigate('/managing-director/approvals')}>
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="flex items-center space-x-2">
+                  <Target className="h-5 w-5 text-orange-600" />
+                  <span className="font-medium">Approvals Center</span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Review pending decisions
+                </p>
+              </div>
+              <ArrowRight className="h-4 w-4 text-muted-foreground" />
+            </div>
+          </CardContent>
+        </Card>
+      </div>
       {/* Main Content Tabs */}
       <Tabs defaultValue="projects" className="space-y-4">
         <TabsList>
