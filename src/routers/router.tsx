@@ -10,6 +10,7 @@ import { accountantRoutes } from './accountant-routes';
 import { administratorRoutes } from './administrator-routes';
 import { employeeRoutes } from './employee-routes';
 import { getRoleBaseDashboard } from '@/lib/navigation';
+import PaginationDemoPage from '@/pages/pagination-demo';
 import type { User, UserRole } from '@/types';
 
 // Loading component
@@ -133,6 +134,17 @@ export const createAppRouter = (
       ...transformRoutes(accountantRoutes),
       ...transformRoutes(administratorRoutes),
       ...transformRoutes(employeeRoutes),
+      // Demo route for pagination system
+      {
+        path: '/pagination-demo',
+        element: wrapWithAuth(<div />),
+        children: [
+          {
+            path: '',
+            element: <PaginationDemoPage />,
+          },
+        ],
+      },
     ] : []),
     // Catch all route
     {
