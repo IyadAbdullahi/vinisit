@@ -82,6 +82,13 @@ export const navigationConfig: NavigationItem[] = [
     roles: ['department_head'],
   },
   {
+    id: 'dept-head-procurement',
+    label: 'Procurement',
+    icon: 'ShoppingCart',
+    href: '/department-head/procurement',
+    roles: ['department_head'],
+  },
+  {
     id: 'dept-head-request-forms',
     label: 'Request Forms',
     icon: 'FileText',

@@ -21,8 +21,23 @@ import {
   AlertTriangle,
   FileText,
   Plus,
+  Kanban,
+  BarChart3,
+  Users,
+  Package,
+  FolderOpen
 } from 'lucide-react';
 import { mockProjects, mockRequestForms } from '../mockdata';
+import { GanttChart } from '@/components/project-management/gantt-chart';
+import { KanbanBoard } from '@/components/project-management/kanban-board';
+import { MilestoneTracker } from '@/components/project-management/milestone-tracker';
+import { DocumentRepository } from '@/components/project-management/document-repository';
+import { VendorManagement } from '@/components/procurement/vendor-management';
+import { ItemCatalog } from '@/components/procurement/item-catalog';
+import { ProcurementWorkflow } from '@/components/procurement/procurement-workflow';
+import { TeamAssignment } from '@/components/team-management/team-assignment';
+import { PerformanceDashboard } from '@/components/team-management/performance-dashboard';
+import { ResourceAllocation } from '@/components/team-management/resource-allocation';
 import type { Project, RequestForm } from '@/types';
 
 const ProjectDetailsPage = () => {
@@ -151,11 +166,14 @@ const ProjectDetailsPage = () => {
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-        <TabsList className="grid w-full grid-cols-4">
+        <TabsList className="grid w-full grid-cols-7">
           <TabsTrigger value="overview">Overview</TabsTrigger>
+          <TabsTrigger value="gantt">Gantt Chart</TabsTrigger>
+          <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
           <TabsTrigger value="milestones">Milestones</TabsTrigger>
-          <TabsTrigger value="tasks">Tasks</TabsTrigger>
-          <TabsTrigger value="requests">Requests</TabsTrigger>
+          <TabsTrigger value="documents">Documents</TabsTrigger>
+          <TabsTrigger value="procurement">Procurement</TabsTrigger>
+          <TabsTrigger value="team">Team</TabsTrigger>
         </TabsList>
 
         <TabsContent value="overview">
@@ -209,186 +227,107 @@ const ProjectDetailsPage = () => {
           </div>
         </TabsContent>
 
+        <TabsContent value="gantt">
+          <GanttChart
+            project={project}
+            onMilestoneEdit={(milestone) => console.log('Edit milestone:', milestone)}
+            onTaskEdit={(task) => console.log('Edit task:', task)}
+            onAddMilestone={() => console.log('Add milestone')}
+            onAddTask={() => console.log('Add task')}
+          />
+        </TabsContent>
+
+        <TabsContent value="kanban">
+          <KanbanBoard
+            project={project}
+            onTaskEdit={(task) => console.log('Edit task:', task)}
+            onTaskMove={(taskId, newStatus) => console.log('Move task:', taskId, newStatus)}
+            onAddTask={(status) => console.log('Add task with status:', status)}
+          />
+        </TabsContent>
+
         <TabsContent value="milestones">
-          <Card>
-            <CardHeader>
-              <div className="flex justify-between items-center">
-                <CardTitle>Project Milestones</CardTitle>
-                <Button size="sm">
-                  <Plus className="h-4 w-4 mr-2" />
-                  Add Milestone
-                </Button>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                {project.milestones.map((milestone) => (
-                  <div
-                    key={milestone.id}
-                    className="border rounded-lg p-4 space-y-3"
-                  >
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h3 className="font-medium">{milestone.name}</h3>
-                        <p className="text-sm text-gray-500">{milestone.description}</p>
-                      </div>
-                      <Badge variant="outline" className={getStatusBadgeColor(milestone.status)}>
-                        {milestone.status.replace('_', ' ')}
-                      </Badge>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="flex justify-between items-center text-sm">
-                        <span>Progress</span>
-                        <span>{milestone.progress}%</span>
-                      </div>
-                      <Progress value={milestone.progress} className="h-2" />
-                    </div>
-                    <div className="flex justify-between items-center text-sm">
-                      <div className="flex items-center text-gray-500">
-                        <Calendar className="h-4 w-4 mr-1" />
-                        Due: {formatDate(milestone.dueDate)}
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <div>
-                          <span className="text-gray-500">Budget: </span>
-                          {formatCurrency(milestone.budget)}
-                        </div>
-                        <div>
-                          <span className="text-gray-500">Spent: </span>
-                          {formatCurrency(milestone.spent)}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          <MilestoneTracker
+            project={project}
+            onMilestoneUpdate={(milestone) => console.log('Update milestone:', milestone)}
+            onMilestoneAdd={(milestone) => console.log('Add milestone:', milestone)}
+            onMilestoneDelete={(milestoneId) => console.log('Delete milestone:', milestoneId)}
+          />
         </TabsContent>
 
-        <TabsContent value="tasks">
-          <Card>
-            <CardHeader>
-              <div className="flex justify-between items-center">
-                <CardTitle>Project Tasks</CardTitle>
-                <Button size="sm">
-                  <Plus className="h-4 w-4 mr-2" />
-                  Add Task
-                </Button>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Task</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead>Priority</TableHead>
-                    <TableHead>Timeline</TableHead>
-                    <TableHead>Hours</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {project.tasks.map((task) => (
-                    <TableRow key={task.id}>
-                      <TableCell>
-                        <div>
-                          <p className="font-medium">{task.name}</p>
-                          <p className="text-sm text-gray-500">{task.description}</p>
-                        </div>
-                      </TableCell>
-                      <TableCell>
-                        <Badge variant="outline" className={getStatusBadgeColor(task.status)}>
-                          {task.status.replace('_', ' ')}
-                        </Badge>
-                      </TableCell>
-                      <TableCell>
-                        <Badge variant="outline" className={getPriorityBadgeColor(task.priority)}>
-                          {task.priority}
-                        </Badge>
-                      </TableCell>
-                      <TableCell>
-                        <div className="space-y-1 text-sm">
-                          <div className="flex items-center">
-                            <Calendar className="h-4 w-4 mr-1" />
-                            {formatDate(task.startDate)}
-                          </div>
-                          <div className="flex items-center">
-                            <Clock className="h-4 w-4 mr-1" />
-                            {formatDate(task.dueDate)}
-                          </div>
-                        </div>
-                      </TableCell>
-                      <TableCell>
-                        <div className="text-sm">
-                          <p>Est: {task.estimatedHours}h</p>
-                          <p className="text-gray-500">Act: {task.actualHours}h</p>
-                        </div>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
+        <TabsContent value="documents">
+          <DocumentRepository
+            projectId={project.id}
+            projectName={project.name}
+            onDocumentUpload={(file, metadata) => console.log('Upload document:', file, metadata)}
+            onDocumentUpdate={(document) => console.log('Update document:', document)}
+            onDocumentDelete={(documentId) => console.log('Delete document:', documentId)}
+          />
         </TabsContent>
 
-        <TabsContent value="requests">
-          <Card>
-            <CardHeader>
-              <div className="flex justify-between items-center">
-                <CardTitle>Request Forms</CardTitle>
-                <Button onClick={() => navigate('/department-head/projects/new', { state: { activeTab: 'request-forms' } })}>
-                  <Plus className="h-4 w-4 mr-2" />
-                  New Request
-                </Button>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                {projectRequests.map((request) => (
-                  <div
-                    key={request.id}
-                    className="border rounded-lg p-4 space-y-3"
-                  >
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h3 className="font-medium">{request.name}</h3>
-                        <p className="text-sm text-gray-500">{request.description}</p>
-                      </div>
-                      <Badge
-                        variant="outline"
-                        className={
-                          request.currentStatus === 'approved'
-                            ? 'bg-green-100 text-green-800 border-green-200'
-                            : request.currentStatus === 'rejected'
-                            ? 'bg-red-100 text-red-800 border-red-200'
-                            : 'bg-yellow-100 text-yellow-800 border-yellow-200'
-                        }
-                      >
-                        {request.currentStatus.replace('_', ' ')}
-                      </Badge>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="outline">{request.type}</Badge>
-                      <Badge variant="outline">{request.priority}</Badge>
-                      <Badge variant="outline">{formatCurrency(request.totalAmount || 0)}</Badge>
-                    </div>
-                    <div className="flex justify-between items-center text-sm">
-                      <div className="flex items-center text-gray-500">
-                        <Calendar className="h-4 w-4 mr-1" />
-                        Requested: {formatDate(request.requestDate)}
-                      </div>
-                      <Button variant="outline" size="sm">
-                        <FileText className="h-4 w-4 mr-2" />
-                        View Details
-                      </Button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+        <TabsContent value="procurement">
+          <Tabs defaultValue="vendors" className="space-y-4">
+            <TabsList>
+              <TabsTrigger value="vendors">Vendor Management</TabsTrigger>
+              <TabsTrigger value="catalog">Item Catalog</TabsTrigger>
+              <TabsTrigger value="workflow">Procurement Workflow</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="vendors">
+              <VendorManagement
+                onVendorSelect={(vendor) => console.log('Select vendor:', vendor)}
+                onVendorUpdate={(vendor) => console.log('Update vendor:', vendor)}
+              />
+            </TabsContent>
+            
+            <TabsContent value="catalog">
+              <ItemCatalog
+                onItemSelect={(item) => console.log('Select item:', item)}
+                onItemUpdate={(item) => console.log('Update item:', item)}
+                onCreateOrder={(items) => console.log('Create order:', items)}
+              />
+            </TabsContent>
+            
+            <TabsContent value="workflow">
+              <ProcurementWorkflow
+                onWorkflowUpdate={(workflow) => console.log('Update workflow:', workflow)}
+                onStepComplete={(workflowId, stepId) => console.log('Complete step:', workflowId, stepId)}
+              />
+            </TabsContent>
+          </Tabs>
+        </TabsContent>
+
+        <TabsContent value="team">
+          <Tabs defaultValue="assignment" className="space-y-4">
+            <TabsList>
+              <TabsTrigger value="assignment">Team Assignment</TabsTrigger>
+              <TabsTrigger value="performance">Performance Dashboard</TabsTrigger>
+              <TabsTrigger value="allocation">Resource Allocation</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="assignment">
+              <TeamAssignment
+                project={project}
+                onAssignmentUpdate={(assignment) => console.log('Update assignment:', assignment)}
+                onMemberAssign={(employeeId, projectId, role) => console.log('Assign member:', employeeId, projectId, role)}
+              />
+            </TabsContent>
+            
+            <TabsContent value="performance">
+              <PerformanceDashboard
+                departmentId={project.departmentId}
+                onPerformanceUpdate={(metrics) => console.log('Update performance:', metrics)}
+              />
+            </TabsContent>
+            
+            <TabsContent value="allocation">
+              <ResourceAllocation
+                departmentId={project.departmentId}
+                onAllocationUpdate={(allocation) => console.log('Update allocation:', allocation)}
+                onOptimizationApply={(suggestion) => console.log('Apply optimization:', suggestion)}
+              />
+            </TabsContent>
+          </Tabs>
         </TabsContent>
       </Tabs>
     </div>

@@ -11,6 +11,7 @@ const RequestFormsPage = React.lazy(() => import('@/pages/department-head/reques
 const BudgetPage = React.lazy(() => import('@/pages/department-head/budget'));
 const ReportsPage = React.lazy(() => import('@/pages/department-head/reports'));
 const ApprovalsPage = React.lazy(() => import('@/pages/department-head/approvals'));
+const ProcurementPage = React.lazy(() => import('@/pages/department-head/procurement'));
 
 export const departmentHeadRoutes: RouteObject[] = [
   {
@@ -43,6 +44,10 @@ export const departmentHeadRoutes: RouteObject[] = [
       {
         path: 'team/:employeeId',
         element: <TeamPage />,
+      },
+      {
+        path: 'procurement',
+        element: <ProcurementPage />,
       },
       {
         path: 'request-forms',

@@ -40,7 +40,11 @@ import {
   MoreVertical,
   Mail,
   Phone,
-  Building2
+  Building2,
+  Target,
+  TrendingUp,
+  Award,
+  Settings
 } from 'lucide-react';
 import {
   DropdownMenu,
@@ -50,11 +54,34 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { TeamAssignment } from '@/components/team-management/team-assignment';
+import { PerformanceDashboard } from '@/components/team-management/performance-dashboard';
+import { ResourceAllocation } from '@/components/team-management/resource-allocation';
 
 const TeamPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [roleFilter, setRoleFilter] = useState('all');
   const [showAssignDialog, setShowAssignDialog] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview');
+
+  // Mock current project for team assignment
+  const currentProject = {
+    id: 'PRJ001',
+    name: 'Current Department Project',
+    code: 'CDP-2024',
+    departmentId: '2',
+    managerId: '102',
+    budget: 5000000,
+    spent: 1250000,
+    startDate: '2024-01-15',
+    endDate: '2025-12-31',
+    status: 'active' as const,
+    priority: 'high' as const,
+    progress: 25,
+    milestones: [],
+    tasks: []
+  };
 
   // Mock data - In production, this would come from your API
   const teamStats = {
@@ -139,10 +166,20 @@ const TeamPage = () => {
           <h1 className="text-3xl font-bold">Team Management</h1>
           <p className="text-muted-foreground">Manage your department's team members</p>
         </div>
-        <Button onClick={() => setShowAssignDialog(true)}>
-          <UserPlus className="h-4 w-4 mr-2" />
-          Add Team Member
-        </Button>
+        <div className="flex items-center space-x-2">
+          <Button variant="outline" onClick={() => setActiveTab('performance')}>
+            <BarChart2 className="h-4 w-4 mr-2" />
+            Performance
+          </Button>
+          <Button variant="outline" onClick={() => setActiveTab('allocation')}>
+            <Settings className="h-4 w-4 mr-2" />
+            Resource Allocation
+          </Button>
+          <Button onClick={() => setShowAssignDialog(true)}>
+            <UserPlus className="h-4 w-4 mr-2" />
+            Add Team Member
+          </Button>
+        </div>
       </div>
 
       {/* Team Stats */}
@@ -198,143 +235,153 @@ const TeamPage = () => {
         </Card>
       </div>
 
-      {/* Filters */}
-      <div className="flex flex-col md:flex-row gap-4">
-        <div className="flex-1">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-            <Input
-              placeholder="Search team members..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10"
-            />
+      {/* Main Content */}
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
+        <TabsList>
+          <TabsTrigger value="overview">Team Overview</TabsTrigger>
+          <TabsTrigger value="assignment">Team Assignment</TabsTrigger>
+          <TabsTrigger value="performance">Performance Dashboard</TabsTrigger>
+          <TabsTrigger value="allocation">Resource Allocation</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="overview">
+          {/* Filters */}
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+                <Input
+                  placeholder="Search team members..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
+            </div>
+            
+            <Select value={roleFilter} onValueChange={setRoleFilter}>
+              <SelectTrigger className="w-48">
+                <Filter className="h-4 w-4 mr-2" />
+                <SelectValue placeholder="Filter by role" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Roles</SelectItem>
+                <SelectItem value="engineer">Engineers</SelectItem>
+                <SelectItem value="manager">Managers</SelectItem>
+                <SelectItem value="supervisor">Supervisors</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
-        </div>
-        
-        <Select value={roleFilter} onValueChange={setRoleFilter}>
-          <SelectTrigger className="w-48">
-            <Filter className="h-4 w-4 mr-2" />
-            <SelectValue placeholder="Filter by role" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Roles</SelectItem>
-            <SelectItem value="engineer">Engineers</SelectItem>
-            <SelectItem value="manager">Managers</SelectItem>
-            <SelectItem value="supervisor">Supervisors</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
 
-      {/* Team Members Table */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Team Members</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Employee</TableHead>
-                <TableHead>Contact</TableHead>
-                <TableHead>Projects</TableHead>
-                <TableHead>Utilization</TableHead>
-                <TableHead>Performance</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {filteredMembers.map((member) => (
-                <TableRow key={member.id}>
-                  <TableCell>
-                    <div className="flex items-center gap-3">
-                      <Avatar>
-                        <AvatarImage src={member.avatar} />
-                        <AvatarFallback>{getInitials(member.name)}</AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <p className="font-medium">{member.name}</p>
-                        <p className="text-sm text-muted-foreground">{member.role}</p>
-                      </div>
-                    </div>
-                  </TableCell>
-                  
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div className="flex items-center text-sm">
-                        <Mail className="h-4 w-4 mr-2 text-muted-foreground" />
-                        {member.email}
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <Phone className="h-4 w-4 mr-2 text-muted-foreground" />
-                        {member.phone}
-                      </div>
-                    </div>
-                  </TableCell>
-                  
-                  <TableCell>
-                    <div className="flex flex-wrap gap-1">
-                      {member.projects.map((project) => (
-                        <Badge key={project} variant="outline">
-                          {project}
+          {/* Team Members Table */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Team Members</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Employee</TableHead>
+                    <TableHead>Contact</TableHead>
+                    <TableHead>Projects</TableHead>
+                    <TableHead>Utilization</TableHead>
+                    <TableHead>Performance</TableHead>
+                    <TableHead>Status</TableHead>
+                    <TableHead className="text-right">Actions</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {filteredMembers.map((member) => (
+                    <TableRow key={member.id}>
+                      <TableCell>
+                        <div className="flex items-center gap-3">
+                          <Avatar>
+                            <AvatarImage src={member.avatar} />
+                            <AvatarFallback>{getInitials(member.name)}</AvatarFallback>
+                          </Avatar>
+                          <div>
+                            <p className="font-medium">{member.name}</p>
+                            <p className="text-sm text-muted-foreground">{member.role}</p>
+                          </div>
+                        </div>
+                      </TableCell>
+                      
+                      <TableCell>
+                        <div className="space-y-1">
+                          <div className="flex items-center text-sm">
+                            <Mail className="h-4 w-4 mr-2 text-muted-foreground" />
+                            {member.email}
+                          </div>
+                          <div className="flex items-center text-sm">
+                            <Phone className="h-4 w-4 mr-2 text-muted-foreground" />
+                            {member.phone}
+                          </div>
+                        </div>
+                      </TableCell>
+                      
+                      <TableCell>
+                        <div className="flex flex-wrap gap-1">
+                          {member.projects.map((project) => (
+                            <Badge key={project} variant="outline">
+                              {project}
+                            </Badge>
+                          ))}
+                        </div>
+                      </TableCell>
+                      
+                      <TableCell>
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between">
+                            <span className={`text-sm font-medium ${getUtilizationColor(member.utilization)}`}>
+                              {member.utilization}%
+                            </span>
+                          </div>
+                          <Progress value={member.utilization} className="h-2" />
+                        </div>
+                      </TableCell>
+                      
+                      <TableCell>
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between">
+                            <span className={`text-sm font-medium ${getPerformanceColor(member.performance)}`}>
+                              {member.performance}%
+                            </span>
+                          </div>
+                          <Progress value={member.performance} className="h-2" />
+                        </div>
+                      </TableCell>
+                      
+                      <TableCell>
+                        <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
+                          {member.status.charAt(0).toUpperCase() + member.status.slice(1)}
                         </Badge>
-                      ))}
-                    </div>
-                  </TableCell>
-                  
-                  <TableCell>
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <span className={`text-sm font-medium ${getUtilizationColor(member.utilization)}`}>
-                          {member.utilization}%
-                        </span>
-                      </div>
-                      <Progress value={member.utilization} className="h-2" />
-                    </div>
-                  </TableCell>
-                  
-                  <TableCell>
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <span className={`text-sm font-medium ${getPerformanceColor(member.performance)}`}>
-                          {member.performance}%
-                        </span>
-                      </div>
-                      <Progress value={member.performance} className="h-2" />
-                    </div>
-                  </TableCell>
-                  
-                  <TableCell>
-                    <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
-                      {member.status.charAt(0).toUpperCase() + member.status.slice(1)}
-                    </Badge>
-                  </TableCell>
-                  
-                  <TableCell className="text-right">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" size="sm">
-                          <MoreVertical className="h-4 w-4" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>View Profile</DropdownMenuItem>
-                        <DropdownMenuItem>Assign to Project</DropdownMenuItem>
-                        <DropdownMenuItem>Performance Review</DropdownMenuItem>
-                        <DropdownMenuItem>Update Role</DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </CardContent>
-      </Card>
-
+                      </TableCell>
+                      
+                      <TableCell className="text-right">
+                        <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                            <Button variant="ghost" size="sm">
+                              <MoreVertical className="h-4 w-4" />
+                            </Button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent align="end">
+                            <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuItem>View Profile</DropdownMenuItem>
+                            <DropdownMenuItem>Assign to Project</DropdownMenuItem>
+                            <DropdownMenuItem>Performance Review</DropdownMenuItem>
+                            <DropdownMenuItem>Update Role</DropdownMenuItem>
+                          </DropdownMenuContent>
+                        </DropdownMenu>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
+        </TabsContent>
       {/* Add Team Member Dialog */}
       <Dialog open={showAssignDialog} onOpenChange={setShowAssignDialog}>
         <DialogContent className="sm:max-w-[600px]">
@@ -370,4 +417,11 @@ const TeamPage = () => {
   );
 };
 
+        <TabsContent value="assignment">
+          <TeamAssignment
+            project={currentProject}
+            onAssignmentUpdate={(assignment) => console.log('Update assignment:', assignment)}
+            onMemberAssign={(employeeId, projectId, role) => console.log('Assign member:', employeeId, projectId, role)}
+          />
+        </TabsContent>
 export default TeamPage; 

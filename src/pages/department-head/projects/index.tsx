@@ -38,6 +38,9 @@ import {
   Clock,
   Plus,
   FileText,
+  Kanban,
+  BarChart3,
+  Users
 } from 'lucide-react';
 import { mockProjects } from '../mockdata';
 import type { Project } from '@/types';
@@ -104,10 +107,16 @@ const ProjectsPage = () => {
           <p className="text-gray-600 mt-1">Manage and monitor your department's projects</p>
         </div>
         
-        <Button onClick={() => navigate('/department-head/projects/new')}>
-          <Plus className="h-4 w-4 mr-2" />
-          New Project
-        </Button>
+        <div className="flex items-center space-x-2">
+          <Button variant="outline" onClick={() => navigate('/department-head/team')}>
+            <Users className="h-4 w-4 mr-2" />
+            Team Management
+          </Button>
+          <Button onClick={() => navigate('/department-head/projects/new')}>
+            <Plus className="h-4 w-4 mr-2" />
+            New Project
+          </Button>
+        </div>
       </div>
 
       {/* Filters */}
